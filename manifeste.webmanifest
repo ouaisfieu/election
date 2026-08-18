@@ -1,0 +1,17 @@
+{
+ "name": "Le Scrutin",
+ "short_name": "Le Scrutin",
+ "start_url": "./",
+ "display": "standalone",
+ "background_color": "#0e1116",
+ "theme_color": "#12151c",
+ "lang": "fr",
+ "description": "Simulateur d'élections belges — fédérales et régionales, 2029 et après",
+ "icons": [
+  {
+   "src": "assets/og/accueil.png",
+   "sizes": "1200x630",
+   "type": "image/png"
+  }
+ ]
+}

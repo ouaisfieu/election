@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="nl" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>De Stembus — simulator van Belgische verkiezingen</title>
+<meta name="description" content="Simuleer de Belgische federale en regionale verkiezingen van 2029: campagne, zetelverdeling volgens D&#x27;Hondt, coalitievorming en legislatuur.">
+<link rel="canonical" href="https://ouaisfieu.github.io/election/nl/">
+<link rel="alternate" hreflang="nl" href="https://ouaisfieu.github.io/election/nl/">
+<link rel="alternate" hreflang="fr" href="https://ouaisfieu.github.io/election/">
+<link rel="alternate" hreflang="x-default" href="https://ouaisfieu.github.io/election/">
+<meta name="author" content="ouaisfieu">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="De Stembus">
+<meta property="og:locale" content="nl_BE">
+<meta property="og:title" content="De Stembus — simulator van Belgische verkiezingen">
+<meta property="og:description" content="Simuleer de Belgische federale en regionale verkiezingen van 2029: campagne, zetelverdeling volgens D&#x27;Hondt, coalitievorming en legislatuur.">
+<meta property="og:url" content="https://ouaisfieu.github.io/election/nl/">
+<meta property="og:image" content="https://ouaisfieu.github.io/election/assets/og/accueil.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="De Stembus — simulator van Belgische verkiezingen">
+<meta name="twitter:description" content="Simuleer de Belgische federale en regionale verkiezingen van 2029: campagne, zetelverdeling volgens D&#x27;Hondt, coalitievorming en legislatuur.">
+<meta name="twitter:image" content="https://ouaisfieu.github.io/election/assets/og/accueil.png">
+<meta name="theme-color" content="#12151c">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../assets/og/accueil.png">
+<link rel="manifest" href="../manifeste.webmanifest">
+<link rel="alternate" type="application/atom+xml" title="De Stembus" href="../flux.xml">
+<link rel="stylesheet" href="../assets/css/style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"De Stembus","url":"https://ouaisfieu.github.io/election/nl/","inLanguage":"nl","description":"Simulator van Belgische federale en regionale verkiezingen."}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Game","name":"De Stembus","url":"https://ouaisfieu.github.io/election/nl/simulator/","genre":"verkiezingssimulatie","inLanguage":"nl","isAccessibleForFree":true,"numberOfPlayers":{"@type":"QuantitativeValue","value":1}}</script>
+</head>
+<body>
+<a class="saut" href="#contenu">Naar de inhoud</a>
+<header class="entete">
+  <div class="bandeau">
+    <a class="marque" href="./">De Stembus</a>
+    <nav class="principale" aria-label="Hoofdnavigatie">
+      <ul><li><a href="./" aria-current="page">Start</a></li><li><a href="./simulator/">De simulator</a></li><li><a href="./kamer/">De Kamer</a></li><li><a href="./parlementen/">De parlementen</a></li><li><a href="./regels/">De regels</a></li><li><a href="./methode/">De methode</a></li><li><a href="./actualiteit/">Actualiteit</a></li></ul>
+    </nav>
+    <a class="langue" href="https://ouaisfieu.github.io/election/" hreflang="fr" lang="fr">Français</a>
+  </div>
+  
+</header>
+<main id="contenu">
+<h1>Een Belgische verkiezing simuleren, van het stembiljet tot de regering</h1>
+<p class="chapeau">Vier bedrijven: de campagne tot 2029, de federale en regionale stembusgang op dezelfde dag, de coalitievorming, en dan de legislatuur. De berekening is de echte Belgische berekening — D'Hondt, kieskring per kieskring, 5 %-drempel, taalgroepen — toegepast op de officiële uitslag van 9 juni 2024.</p>
+<p><a class="bouton bouton--primaire" href="simulator/">De simulatie starten</a> <a class="bouton" href="methode/">Eerst de methode lezen</a></p>
+<div class="chiffres">
+<div class="chiffre"><b>150</b><span>Kamerzetels, in 11 kieskringen</span></div>
+<div class="chiffre"><b>313</b><span>gesimuleerde zetels in totaal, vijf assemblees</span></div>
+<div class="chiffre"><b>729</b><span>mogelijke campagnetrajecten</span></div>
+<div class="chiffre"><b>0</b><span>zetels afwijking bij de terugtest van de Kamer 2024</span></div>
+</div>
+<h2>Wat deze site doet</h2>
+<div class="grille">
+<div class="carte"><h3>Hij rekent, hij voorspelt niet</h3><p>Het model past een stemverschuiving toe die <em>u</em> kiest, vanuit een startpunt dat <em>u</em> kiest — de stem van 2024 of een van de drie peilingen van 2026.</p></div>
+<div class="carte"><h3>Hij zegt nooit op wie te stemmen</h3><p>Geen enkele partij wordt gerangschikt of aanbevolen. Uitsluitingen — inclusief het cordon sanitaire — zijn gedateerde publieke feiten; u beslist of ze in 2029 nog gelden.</p></div>
+<div class="carte"><h3>Hij publiceert zijn fouten</h3><p>De motor reproduceert de uitslag van 2024 <strong>zetel voor zetel</strong> in de Kamer, het Vlaams Parlement en het Duitstalige Parlement. In het Waals Parlement plaatst hij 8 zetels anders, omdat de provinciale lijstenverbinding niet is geïmplementeerd.</p></div>
+<div class="carte"><h3>Hij past in één pagina</h3><p>HTML, CSS en JavaScript, meer niet. Alle inhoud is leesbaar zonder JavaScript.</p></div>
+</div>
+<h2>Waar te beginnen</h2>
+<div class="grille">
+<div class="carte carte--accent"><h3><a href="simulator/">De simulator</a></h3><p>De vier bedrijven, van september 2026 tot 2034.</p></div>
+<div class="carte carte--accent"><h3><a href="kamer/">De Kamer, kieskring per kieskring</a></h3><p>Elf pagina's, één per kieskring: de uitslag van 2024 en de D'Hondt-berekening.</p></div>
+<div class="carte carte--accent"><h3><a href="parlementen/">De gewest- en gemeenschapsparlementen</a></h3><p>Vlaanderen, Wallonië, Brussel en de Duitstalige Gemeenschap, op dezelfde dag verkozen.</p></div>
+<div class="carte carte--accent"><h3><a href="regels/">De regels van de Belgische stembusgang</a></h3><p>D'Hondt, drempel, lijstenverbinding, lijststem, taalgroepen, artikel 46.</p></div>
+<div class="carte carte--accent"><h3><a href="coalities/">De rekenkunde van coalities</a></h3><p>76 zetels, twee derde, meerderheid in elke taalgroep.</p></div>
+<div class="carte carte--accent"><h3><a href="actualiteit/">De actualiteit, gedateerd en gebronnnd</a></h3><p>Van juni 2024 tot het conclaaf van september 2026, feit na feit.</p></div>
+</div>
+</main>
+<footer class="pied">
+  <p class="pied-liens"><a href="./bronnen/">De bronnen</a> · <a href="./woordenlijst/">Woordenlijst</a> · <a href="./coalities/">De coalities</a> · <a href="./netwerk/">Het netwerk</a></p>
+  <p>Tekst en code onder CC BY-SA 4.0. Geen trackers, geen cookies, geen externe lettertypes, geen netwerkoproepen.</p>
+  <p>Laatst bijgewerkt : <time datetime="2026-08-18">2026-08-18</time> ·
+     <a href="https://github.com/ouaisfieu/election" rel="noopener">Broncode</a></p>
+</footer>
+
+</body>
+</html>

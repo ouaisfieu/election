@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="nl" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>De simulator: campagne, stembusgang, coalitie, legislatuur — De Stembus</title>
+<meta name="description" content="Simuleer de Belgische verkiezingen van 2029 in vier bedrijven: zes gedateerde ijkmomenten, de zetelverdeling volgens D&#x27;Hondt, de coalitievorming en de legislatuur.">
+<link rel="canonical" href="https://ouaisfieu.github.io/election/nl/simulator/">
+<link rel="alternate" hreflang="nl" href="https://ouaisfieu.github.io/election/nl/simulator/">
+<link rel="alternate" hreflang="fr" href="https://ouaisfieu.github.io/election/simulateur/">
+<link rel="alternate" hreflang="x-default" href="https://ouaisfieu.github.io/election/simulateur/">
+<meta name="author" content="ouaisfieu">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="De Stembus">
+<meta property="og:locale" content="nl_BE">
+<meta property="og:title" content="De simulator: campagne, stembusgang, coalitie, legislatuur — De Stembus">
+<meta property="og:description" content="Simuleer de Belgische verkiezingen van 2029 in vier bedrijven: zes gedateerde ijkmomenten, de zetelverdeling volgens D&#x27;Hondt, de coalitievorming en de legislatuur.">
+<meta property="og:url" content="https://ouaisfieu.github.io/election/nl/simulator/">
+<meta property="og:image" content="https://ouaisfieu.github.io/election/assets/og/simulateur.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="De simulator: campagne, stembusgang, coalitie, legislatuur — De Stembus">
+<meta name="twitter:description" content="Simuleer de Belgische verkiezingen van 2029 in vier bedrijven: zes gedateerde ijkmomenten, de zetelverdeling volgens D&#x27;Hondt, de coalitievorming en de legislatuur.">
+<meta name="twitter:image" content="https://ouaisfieu.github.io/election/assets/og/simulateur.png">
+<meta name="theme-color" content="#12151c">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../../assets/og/accueil.png">
+<link rel="manifest" href="../../manifeste.webmanifest">
+<link rel="alternate" type="application/atom+xml" title="De Stembus" href="../../flux.xml">
+<link rel="stylesheet" href="../../assets/css/style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Start","item":"https://ouaisfieu.github.io/election/nl/"},{"@type":"ListItem","position":2,"name":"De simulator","item":"https://ouaisfieu.github.io/election/nl/simulator/"}]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Game","name":"De Stembus — de simulator","url":"https://ouaisfieu.github.io/election/nl/simulator/","inLanguage":"nl","isAccessibleForFree":true,"gamePlatform":"Web","applicationCategory":"GameApplication","description":"Vier bedrijven: campagne, stembusgang, coalitie, legislatuur."}</script>
+</head>
+<body>
+<a class="saut" href="#contenu">Naar de inhoud</a>
+<header class="entete">
+  <div class="bandeau">
+    <a class="marque" href="../">De Stembus</a>
+    <nav class="principale" aria-label="Hoofdnavigatie">
+      <ul><li><a href="../">Start</a></li><li><a href="../simulator/" aria-current="page">De simulator</a></li><li><a href="../kamer/">De Kamer</a></li><li><a href="../parlementen/">De parlementen</a></li><li><a href="../regels/">De regels</a></li><li><a href="../methode/">De methode</a></li><li><a href="../actualiteit/">Actualiteit</a></li></ul>
+    </nav>
+    <a class="langue" href="https://ouaisfieu.github.io/election/simulateur/" hreflang="fr" lang="fr">Français</a>
+  </div>
+  <nav class="fil" aria-label="Kruimelpad"><ol><li><a href="../../nl/">Start</a></li><li aria-current="page">De simulator</li></ol></nav>
+</header>
+<main id="contenu">
+<h1>De simulator</h1>
+<p class="chapeau">Vier bedrijven. U kiest een startpunt, zes uitkomsten van reële ijkmomenten, een coalitie en een regeerakkoord. De rest is rekenkunde, en die staat op het scherm.</p>
+<noscript><p class="sansjs">De simulator heeft JavaScript nodig om te rekenen. Zonder JavaScript blijft deze pagina leesbaar: de zes ijkmomenten, hun uitkomsten en de bijhorende stemverschuiving staan hieronder.</p></noscript>
+<section class="acte" id="depart"><span class="numero">Vooraf</span>
+<h2>Het startpunt</h2>
+<p>Een peiling is geen voorspelling. De keuze tussen die van maart of juni 2026 verandert de uitslag met tientallen zetels.</p>
+<fieldset><legend>Startpunt</legend><div class="choix">
+<label><input type="radio" name="depart" value="resultat2024"> <span><strong>De stembusgang van 2024</strong><small>FOD Binnenlandse Zaken — officieel resultaat — Geen verschuiving: het model vertrekt van de laatste werkelijk uitgebrachte stem. Dit is het enige startpunt zonder enquête.</small></span></label>
+<label><input type="radio" name="depart" value="enquete2026"> <span><strong>Nationaal verkiezingsonderzoek 2026</strong><small>UAntwerpen en ULB — veldwerk maart-april 2026, marge ±2,4 punten — Academisch onderzoek. N-VA blijft eerste in Vlaanderen; PS is opnieuw eerste in Wallonië; PVDA is eerste in Brussel.</small></span></label>
+<label><input type="radio" name="depart" value="grande-enquete-mars2026"> <span><strong>De Grote Peiling, maart 2026</strong><small>HLN, VTM Nieuws, RTL en Le Soir — gepubliceerd op 14 maart 2026 — N-VA en Vlaams Belang op 0,1 punt van elkaar in Vlaanderen. De Waalse en Brusselse cijfers zijn die van maart 2026.</small></span></label>
+<label><input type="radio" name="depart" value="barometre-juin2026" checked> <span><strong>Grote Barometer, juni 2026</strong><small>RTL en Le Soir — gepubliceerd op 12 juni 2026 — Eerste peiling waarin Vlaams Belang duidelijk voorbij N-VA gaat in Vlaanderen. Gepubliceerd op drie jaar van de verkiezing.</small></span></label>
+</div></fieldset></section>
+<section class="acte" id="campagne"><span class="numero">Bedrijf I</span>
+<h2>De campagne: zes ijkmomenten, van september 2026 tot 2029</h2>
+<p>Elk ijkmoment is gedateerd en gedocumenteerd. Geen enkele uitkomst wordt als wenselijk of waarschijnlijk voorgesteld.</p>
+<fieldset id="ech-conclave"><legend>1. Het begrotingsconclaaf van najaar 2026 — <time datetime="2026-09-30">2026-09-30</time></legend>
+<p>Het monitoringcomité becijferde in juli 2026 het tekort op 7,7 miljard euro tegen 2029 en 9,8 miljard tegen 2031, tegenover 4,9 miljard in maart. Op 10 juli 2026 legde de regering 10 miljard tegen 2029 vast, waarvan « meer dan twee derde » structureel. Het conclaaf begint eind september.</p>
+<div class="choix">
+<label><input type="radio" name="conclave" value="accord-structurel" checked> <span><strong>Een overwegend structureel akkoord</strong><small>De 10 miljard wordt gehaald, voor twee derde met permanente maatregelen. De coalitie houdt stand, de politieke kost wordt gedeeld.</small><small style="margin-top:.4rem"><strong>Vlaanderen</strong> : N-VA +1,2, Vlaams Belang −0,8, Vooruit −0,6, cd&amp;v +0,4, PVDA +0,4 · <strong>Wallonië</strong> : MR +0,9, PS −0,7, PTB +0,6, Les Engagés +0,5 · <strong>Brussel</strong> : MR +0,7, PS −0,5, PTB +0,5, Les Engagés +0,3 — marge ±1,5 punt. Een gehaald akkoord komt eerst de partijen ten goede die het opeisen; de linkse oppositie kapitaliseert op de besparingen.</small></span></label>
+<label><input type="radio" name="conclave" value="accord-facade"> <span><strong>Een akkoord in schijn</strong><small>Het cijfer wordt aangekondigd maar steunt op eenmalige ontvangsten en uitgestelde inspanningen. Het Rekenhof stelt dit in december vast.</small><small style="margin-top:.4rem"><strong>Vlaanderen</strong> : Vlaams Belang +1,4, N-VA −0,9, PVDA +0,7, Vooruit −0,4, cd&amp;v −0,3 · <strong>Wallonië</strong> : PTB +1,3, MR −1,0, Les Engagés −0,4, PS +0,3 · <strong>Brussel</strong> : PTB +1,2, MR −0,9, Les Engagés −0,3, PS +0,2 — marge ±1,5 punt. De kloof tussen aankondiging en controle voedt de oppositie aan beide uiteinden.</small></span></label>
+<label><input type="radio" name="conclave" value="echec"> <span><strong>Mislukking en crisis</strong><small>Het conclaaf haalt de deadline niet. De regering werkt met voorlopige twaalfden; artikel 46 van de Grondwet regelt de ontbinding.</small><small style="margin-top:.4rem"><strong>Vlaanderen</strong> : Vlaams Belang +2,6, N-VA −1,6, PVDA +0,9, Vooruit −0,8, cd&amp;v −0,5, Groen +0,2 · <strong>Wallonië</strong> : PTB +2,2, MR −1,8, Les Engagés −1,0, PS +0,6, Ecolo +0,3 · <strong>Brussel</strong> : PTB +2,0, MR −1,6, Les Engagés −0,8, PS +0,5, Ecolo +0,3 — marge ±2,5 punt. Een open begrotingscrisis kwam historisch de partijen buiten de coalitie ten goede; dit is de meest onzekere verschuiving.</small></span></label>
+</div></fieldset>
+<fieldset id="ech-pensions"><legend>2. De pensioenen en het sociaal overleg — <time datetime="2027-03-01">2027-03-01</time></legend>
+<p>Het gemeenschappelijk vakbondsfront voerde nationale stakingen in 2025 en 2026, waaronder die van 12 maart 2026 over pensioenen en indexering.</p>
+<div class="choix">
+<label><input type="radio" name="pensions" value="impose" checked> <span><strong>De hervorming wordt doorgeduwd</strong><small>De tekst wordt aangenomen zonder akkoord van de sociale partners.</small><small style="margin-top:.4rem"><strong>Vlaanderen</strong> : PVDA +1,3, Vooruit −1,0, Vlaams Belang +0,7, cd&amp;v −0,4, N-VA +0,3 · <strong>Wallonië</strong> : PTB +1,6, MR −0,9, Les Engagés −0,6, PS +0,5 · <strong>Brussel</strong> : PTB +1,5, MR −0,8, Les Engagés −0,5, PS +0,4 — marge ±1,5 punt. Sociaal conflict komt eerst de organiserende formaties ten goede.</small></span></label>
+<label><input type="radio" name="pensions" value="negocie"> <span><strong>Een onderhandeld compromis</strong><small>Gedeeltelijk akkoord met de sociale partners: gespreide kalender, lagere opbrengst. Het begrotingstekort groeit navenant.</small><small style="margin-top:.4rem"><strong>Vlaanderen</strong> : Vooruit +1,0, N-VA −0,6, cd&amp;v +0,5, Vlaams Belang −0,3, PVDA −0,3 · <strong>Wallonië</strong> : PS +0,6, PTB −0,6, Les Engagés +0,5, MR −0,5 · <strong>Brussel</strong> : PS +0,6, PTB −0,6, Les Engagés +0,4, MR −0,4 — marge ±1,2 punt. Een zichtbaar compromis komt de onderhandelende partijen ten goede.</small></span></label>
+<label><input type="radio" name="pensions" value="recul"> <span><strong>De terugtrekking</strong><small>De hervorming wordt ingetrokken of uitgehold. De begrotingskloof blijft.</small><small style="margin-top:.4rem"><strong>Vlaanderen</strong> : Vlaams Belang +1,1, N-VA −1,0, Vooruit +0,4, PVDA +0,3 · <strong>Wallonië</strong> : MR −1,1, PTB +0,8, PS +0,5, Les Engagés −0,2 · <strong>Brussel</strong> : MR −1,0, PTB +0,8, PS +0,4 — marge ±1,5 punt. Een terugtrekking kost de dragende partij zonder blijvend voordeel voor de tegenstanders.</small></span></label>
+</div></fieldset>
+<fieldset id="ech-etat-de-droit"><legend>3. De rechtsstaat: GRECO, Commissie, justitie — <time datetime="2027-07-01">2027-07-01</time></legend>
+<p>Het GRECO-addendum van november 2025 beschouwt slechts 8 van de 22 aanbevelingen als bevredigend opgevolgd. Het rechtsstaatrapport van 17 juli 2026 stelt vast dat de naleving van definitieve rechterlijke beslissingen problematisch blijft.</p>
+<div class="choix">
+<label><input type="radio" name="etat-de-droit" value="mise-en-conformite" checked> <span><strong>Een aanpassing aan de aanbevelingen</strong><small>Bindend lobbyregister, externe controle op partijfinanciering, gedeeltelijke herfinanciering van justitie.</small><small style="margin-top:.4rem"><strong>Vlaanderen</strong> : Vlaams Belang −0,9, Groen +0,5, cd&amp;v +0,4, PVDA −0,3, N-VA +0,2 · <strong>Wallonië</strong> : Ecolo +0,6, Les Engagés +0,5, PTB −0,5, MR +0,3 · <strong>Brussel</strong> : Ecolo +0,7, PTB −0,6, Les Engagés +0,4, MR +0,3 — marge ±1,2 punt. De grief van institutionele geslotenheid voedt de proteststem.</small></span></label>
+<label><input type="radio" name="etat-de-droit" value="statu-quo"> <span><strong>Het status quo</strong><small>Er verandert niets: partijfinanciering blijft gecontroleerd door een parlementaire commissie, lobbying blijft ongereguleerd.</small><small style="margin-top:.4rem"><strong>Vlaanderen</strong> : Vlaams Belang +0,9, PVDA +0,5, N-VA −0,4, cd&amp;v −0,3, Open Vld −0,3 · <strong>Wallonië</strong> : PTB +0,9, MR −0,4, PS −0,4, Les Engagés −0,2 · <strong>Brussel</strong> : PTB +1,0, MR −0,4, PS −0,4 — marge ±1,0 punt. De corruptieperceptie-index daalde van 77 naar 69 tussen 2016 en 2025.</small></span></label>
+<label><input type="radio" name="etat-de-droit" value="non-conformite"> <span><strong>De verklaring van niet-naleving</strong><small>GRECO gaat tot het einde van regel 32. Het Europese financiële kader 2028-2034 koppelt rechtsstaat aan financiering.</small><small style="margin-top:.4rem"><strong>Vlaanderen</strong> : Vlaams Belang +1,5, PVDA +0,7, N-VA −0,7, cd&amp;v −0,5, Open Vld −0,4, Groen +0,3 · <strong>Wallonië</strong> : PTB +1,4, MR −0,8, PS −0,6, Ecolo +0,4, Les Engagés −0,4 · <strong>Brussel</strong> : PTB +1,5, MR −0,8, PS −0,6, Ecolo +0,5 — marge ±1,8 punt. Een expliciete internationale sanctie is een gedateerd publiek feit.</small></span></label>
+</div></fieldset>
+<fieldset id="ech-notation"><legend>4. De rating en de schuldenlast — <time datetime="2028-01-15">2028-01-15</time></legend>
+<p>Op 17 april 2026 verlaagde Moody&#x27;s België van Aa3 naar A1. De federale rentelasten overschrijden sinds juli 2026 de 10 miljard euro.</p>
+<div class="choix">
+<label><input type="radio" name="notation" value="stabilisation" checked> <span><strong>Stabilisering</strong><small>Vooruitzicht terug op stabiel, renteverschil beheerst.</small><small style="margin-top:.4rem"><strong>Vlaanderen</strong> : N-VA +0,8, Vlaams Belang −0,5, Open Vld +0,3, PVDA −0,3 · <strong>Wallonië</strong> : MR +0,8, PTB −0,4, Les Engagés +0,3, PS −0,3 · <strong>Brussel</strong> : MR +0,7, PTB −0,4, Les Engagés +0,2 — marge ±1,0 punt. Krediet voor het begrotingsbeleid komt de dragende partijen ten goede.</small></span></label>
+<label><input type="radio" name="notation" value="nouvelle-degradation"> <span><strong>Een nieuwe verlaging</strong><small>Een tweede verlaging in minder dan twee jaar. Het debat verschuift naar houdbaarheid, en naar wie betaalt.</small><small style="margin-top:.4rem"><strong>Vlaanderen</strong> : Vlaams Belang +1,3, N-VA −0,8, PVDA +0,6, Vooruit −0,4, cd&amp;v −0,3 · <strong>Wallonië</strong> : PTB +1,2, MR −1,1, PS +0,3, Les Engagés −0,3 · <strong>Brussel</strong> : PTB +1,2, MR −1,0, PS +0,3 — marge ±1,5 punt. Falen op het eigen gekozen terrein kost meer.</small></span></label>
+<label><input type="radio" name="notation" value="choc-de-taux"> <span><strong>Een renteschok</strong><small>Een externe schok doet het renteverschil stijgen. De geprojecteerde rentelasten worden een onmiddellijke beperking.</small><small style="margin-top:.4rem"><strong>Vlaanderen</strong> : Vlaams Belang +1,8, PVDA +0,9, Vooruit −0,6, N-VA −0,5, cd&amp;v −0,5, Open Vld −0,5 · <strong>Wallonië</strong> : PTB +1,7, MR −1,0, Les Engagés −0,5, PS −0,3, Ecolo +0,3 · <strong>Brussel</strong> : PTB +1,7, MR −1,0, PS −0,3, Ecolo +0,3 — marge ±2,2 punt. Een exogene schok is de minst voorspelbare verschuiving.</small></span></label>
+</div></fieldset>
+<fieldset id="ech-migration"><legend>5. Migratie, veiligheid en uitvoering van rechterlijke beslissingen — <time datetime="2028-06-01">2028-06-01</time></legend>
+<p>Op 27 maart 2026 schorste de Raad van State ministeriële instructies die een arrest van het Grondwettelijk Hof omzeilden. Het nieuwe Strafwetboek trad in werking op 1 september 2026.</p>
+<div class="choix">
+<label><input type="radio" name="migration" value="durcissement" checked> <span><strong>De bewuste verstrakking</strong><small>Het wettelijk kader wordt aangepast aan de praktijk. Het geschil verschuift naar de Europese rechtscolleges.</small><small style="margin-top:.4rem"><strong>Vlaanderen</strong> : N-VA +1,1, Vlaams Belang +0,6, Groen −0,4, cd&amp;v −0,3, Vooruit −0,3 · <strong>Wallonië</strong> : MR +0,7, Ecolo −0,4, PS −0,3, Les Engagés +0,2 · <strong>Brussel</strong> : Ecolo −0,5, MR +0,4, PTB +0,4, PS −0,3 — marge ±1,5 punt. Het thema is salienter in Vlaanderen.</small></span></label>
+<label><input type="radio" name="migration" value="arbitrage-judiciaire"> <span><strong>De bindende rechterlijke uitspraak</strong><small>De rechtscolleges leggen uitvoering op; de staat betaalt de dwangsommen.</small><small style="margin-top:.4rem"><strong>Vlaanderen</strong> : Vlaams Belang +0,9, N-VA −0,6, Groen +0,5, cd&amp;v +0,2 · <strong>Wallonië</strong> : Ecolo +0,6, MR −0,6, PTB +0,3, Les Engagés +0,2 · <strong>Brussel</strong> : Ecolo +0,8, MR −0,7, PTB +0,4 — marge ±1,3 punt. Een rechterlijke beperking voedt beide kampen tegelijk.</small></span></label>
+<label><input type="radio" name="migration" value="crise-execution"> <span><strong>De uitvoeringscrisis</strong><small>Beslissingen worden niet uitgevoerd noch aangevochten: de dwangsommen stapelen zich op.</small><small style="margin-top:.4rem"><strong>Vlaanderen</strong> : Vlaams Belang +1,6, PVDA +0,5, N-VA −0,5, cd&amp;v −0,4, Open Vld −0,3, Groen +0,3 · <strong>Wallonië</strong> : PTB +1,2, MR −0,7, PS −0,5, Ecolo +0,4, Les Engagés −0,3 · <strong>Brussel</strong> : PTB +1,3, MR −0,7, Ecolo +0,5, PS −0,5 — marge ±1,8 punt. De aanhoudende niet-uitvoering is de grief die de Commissie sinds meerdere rapporten vaststelt.</small></span></label>
+</div></fieldset>
+<fieldset id="ech-fin-de-legislature"><legend>6. Het einde van de legislatuur — <time datetime="2029-03-01">2029-03-01</time></legend>
+<p>De federale en regionale verkiezingen vallen op dezelfde dag, in principe in mei of juni 2029. Artikel 46 van de Grondwet regelt de vervroegde ontbinding.</p>
+<div class="choix">
+<label><input type="radio" name="fin-de-legislature" value="terme" checked> <span><strong>De legislatuur gaat tot het einde</strong><small>De regering dient een begroting 2029 in en verschijnt voor de kiezer.</small><small style="margin-top:.4rem"><strong>Vlaanderen</strong> : N-VA +0,6, Vlaams Belang −0,4, cd&amp;v +0,3 · <strong>Wallonië</strong> : MR +0,5, Les Engagés +0,3, PTB −0,3 · <strong>Brussel</strong> : MR +0,4, PTB −0,3, Les Engagés +0,2 — marge ±1,0 punt. Het einde halen is op zich een resultaat.</small></span></label>
+<label><input type="radio" name="fin-de-legislature" value="rupture"> <span><strong>De breuk en vervroegde verkiezingen</strong><small>Een partner verlaat de coalitie. De verkiezing wordt vervroegd.</small><small style="margin-top:.4rem"><strong>Vlaanderen</strong> : Vlaams Belang +1,7, PVDA +0,6, N-VA −0,6, cd&amp;v −0,6, Vooruit −0,6, Open Vld −0,4 · <strong>Wallonië</strong> : PTB +1,5, MR −0,9, Les Engagés −0,5, PS −0,4, Ecolo +0,3 · <strong>Brussel</strong> : PTB +1,6, MR −0,9, Ecolo +0,4, PS −0,4, Les Engagés −0,4 — marge ±2,0 punt. Coalitiebreuken kwamen historisch de buitenstaanders ten goede.</small></span></label>
+<label><input type="radio" name="fin-de-legislature" value="affaires-courantes"> <span><strong>De lopende zaken</strong><small>De regering treedt af maar blijft aan. België kende 541 dagen zonder volwaardige federale regering in 2010-2011, 236 in 2024-2025, en Brussel 613 dagen in 2024-2026.</small><small style="margin-top:.4rem"><strong>Vlaanderen</strong> : Vlaams Belang +2,0, N-VA −0,8, PVDA +0,7, Vooruit −0,7, cd&amp;v −0,6, Open Vld −0,5 · <strong>Wallonië</strong> : PTB +1,8, MR −1,0, PS −0,6, Les Engagés −0,6, Ecolo +0,4 · <strong>Brussel</strong> : PTB +1,9, MR −1,0, PS −0,6, Ecolo +0,5, Les Engagés −0,5 — marge ±2,2 punt. De duur van het onvermogen om te regeren is de meest meetbare grief.</small></span></label>
+</div></fieldset>
+</section>
+<section class="acte" id="scrutin"><span class="numero">Bedrijf II</span>
+<h2>De stembusgang</h2>
+<p>De verschuiving wordt op elke kieskring toegepast, evenredig met het aandeel van 2024 in het gewest; daarna wordt D'Hondt toegepast met de 5 %-drempel.</p>
+<div id="resultat-scrutin" aria-live="polite"></div>
+</section>
+<section class="acte" id="formation"><span class="numero">Bedrijf III</span>
+<h2>De vorming</h2>
+<p>De site sluit zelf geen enkele coalitie uit. Hij vraagt welke uitsluitingen u geldig acht, en somt dan alle meerderheidscombinaties op.</p>
+<fieldset><legend>Verklaarde uitsluitingen</legend><div class="choix">
+<label><input type="checkbox" name="exclusion" value="cordon" checked> <span><strong>Het cordon sanitaire</strong><small>Sinds 1989 weigeren de andere Vlaamse partijen publiek elke coalitie met het Vlaams Blok en later Vlaams Belang. De afspraak heeft geen juridische waarde.</small></span></label>
+<label><input type="checkbox" name="exclusion" value="ptb-federal" checked> <span><strong>De weigering van PVDA om federaal toe te treden</strong><small>PVDA-PTB nam nooit deel aan een federale regering. Dat is een vaststelling, geen regel.</small></span></label>
+</div></fieldset>
+<div id="resultat-coalitions" aria-live="polite"></div>
+</section>
+<section class="acte" id="legislature"><span class="numero">Bedrijf IV</span>
+<h2>De legislatuur</h2>
+<p>Acht werven. Elk draagt de normatieve last die het werkelijk vereist: een gewone wet, een bijzondere wet, of een grondwetsherziening.</p>
+<fieldset><legend>De werven van het akkoord</legend><div class="choix" id="chantiers">
+<label><input type="checkbox" name="chantier" value="trajectoire"> <span><strong>Het begrotingstraject 2029-2034</strong><small><span class="etiquette">gewone wet</span> Beoogde opbrengst: 10 miljard euro structureel over de legislatuur.</small></span></label>
+<label><input type="checkbox" name="chantier" value="financement-partis"> <span><strong>De partijfinanciering en de externe controle</strong><small><span class="etiquette">gewone wet</span> 104 miljoen euro dotaties in 2024; 80 tot 90 % van de partijmiddelen is publiek.</small></span></label>
+<label><input type="checkbox" name="chantier" value="lobbying"> <span><strong>Een bindend lobbyregister en draaideurpolitiek</strong><small><span class="etiquette">gewone wet</span> Vaste grief van de Europese Commissie en GRECO: geen vooruitgang op 17 juli 2026.</small></span></label>
+<label><input type="checkbox" name="chantier" value="justice"> <span><strong>De herfinanciering van justitie</strong><small><span class="etiquette">gewone wet</span> Justitie weegt ongeveer 0,5 % van de staatsbegroting na circa 14 % cumulatieve besparingen.</small></span></label>
+<label><input type="checkbox" name="chantier" value="case-de-tete"> <span><strong>De afschaffing van het devolutief effect van de lijststem</strong><small><span class="etiquette">gewone wet</span> Het devolutief effect draagt de helft van de lijststemmen over volgens de partijvolgorde.</small></span></label>
+<label><input type="checkbox" name="chantier" value="reforme-etat"> <span><strong>Een staatshervorming</strong><small><span class="etiquette">bijzondere wet — art. 4</span> Elke wijziging van de bevoegdheidsverdeling vereist een meerderheid in elke taalgroep en twee derde in totaal (art. 4 van de Grondwet).</small></span></label>
+<label><input type="checkbox" name="chantier" value="transaction"> <span><strong>De verruimde minnelijke schikking</strong><small><span class="etiquette">gewone wet</span> Wet van 14 april 2011, aangenomen bij amendement zonder debat; arrest 83/2016.</small></span></label>
+<label><input type="checkbox" name="chantier" value="circonscription"> <span><strong>De federale kieskring</strong><small><span class="etiquette">herziening — art. 195</span> Een deel van de Kamerzetels verkozen in één kieskring: dit vereist een grondwetsherziening en dus een voorafgaande ontbinding.</small></span></label>
+</div></fieldset>
+<div id="resultat-legislature" aria-live="polite"></div>
+</section>
+<section class="acte" id="proces-verbal"><span class="numero">Het proces-verbaal</span>
+<h2>De volledige berekening, regel per regel</h2>
+<p><button type="button" id="imprimer">Het proces-verbaal afdrukken</button> <button type="button" id="copier-lien">De link van deze partij kopiëren</button></p>
+<div id="pv" aria-live="polite"></div>
+</section>
+</main>
+<footer class="pied">
+  <p class="pied-liens"><a href="../bronnen/">De bronnen</a> · <a href="../woordenlijst/">Woordenlijst</a> · <a href="../coalities/">De coalities</a> · <a href="../netwerk/">Het netwerk</a></p>
+  <p>Tekst en code onder CC BY-SA 4.0. Geen trackers, geen cookies, geen externe lettertypes, geen netwerkoproepen.</p>
+  <p>Laatst bijgewerkt : <time datetime="2026-08-18">2026-08-18</time> ·
+     <a href="https://github.com/ouaisfieu/election" rel="noopener">Broncode</a></p>
+</footer>
+<script src="../../assets/data/donnees.js" defer></script><script src="../../assets/js/moteur.js" defer></script><script src="../../assets/js/jeu.js" defer></script>
+</body>
+</html>

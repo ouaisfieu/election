@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="nl" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>De methode: gegevens, stemverschuiving, terugtest en grenzen — De Stembus</title>
+<meta name="description" content="Het model volledig gepubliceerd: herkomst van de officiële gegevens, evenredige stemverschuiving per gewest, de volledige matrix van de achttien uitkomsten, de terugtest op 2024 en de erkende grenzen.">
+<link rel="canonical" href="https://ouaisfieu.github.io/election/nl/methode/">
+<link rel="alternate" hreflang="nl" href="https://ouaisfieu.github.io/election/nl/methode/">
+<link rel="alternate" hreflang="fr" href="https://ouaisfieu.github.io/election/methode/">
+<link rel="alternate" hreflang="x-default" href="https://ouaisfieu.github.io/election/methode/">
+<meta name="author" content="ouaisfieu">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="De Stembus">
+<meta property="og:locale" content="nl_BE">
+<meta property="og:title" content="De methode: gegevens, stemverschuiving, terugtest en grenzen — De Stembus">
+<meta property="og:description" content="Het model volledig gepubliceerd: herkomst van de officiële gegevens, evenredige stemverschuiving per gewest, de volledige matrix van de achttien uitkomsten, de terugtest op 2024 en de erkende grenzen.">
+<meta property="og:url" content="https://ouaisfieu.github.io/election/nl/methode/">
+<meta property="og:image" content="https://ouaisfieu.github.io/election/assets/og/methode.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="De methode: gegevens, stemverschuiving, terugtest en grenzen — De Stembus">
+<meta name="twitter:description" content="Het model volledig gepubliceerd: herkomst van de officiële gegevens, evenredige stemverschuiving per gewest, de volledige matrix van de achttien uitkomsten, de terugtest op 2024 en de erkende grenzen.">
+<meta name="twitter:image" content="https://ouaisfieu.github.io/election/assets/og/methode.png">
+<meta name="theme-color" content="#12151c">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../../assets/og/accueil.png">
+<link rel="manifest" href="../../manifeste.webmanifest">
+<link rel="alternate" type="application/atom+xml" title="De Stembus" href="../../flux.xml">
+<link rel="stylesheet" href="../../assets/css/style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Start","item":"https://ouaisfieu.github.io/election/nl/"},{"@type":"ListItem","position":2,"name":"De methode","item":"https://ouaisfieu.github.io/election/nl/methode/"}]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"De methode van de simulator","inLanguage":"nl","datePublished":"2026-08-18","dateModified":"2026-08-18","author":{"@type":"Organization","name":"ouaisfieu"},"url":"https://ouaisfieu.github.io/election/nl/methode/"}</script>
+</head>
+<body>
+<a class="saut" href="#contenu">Naar de inhoud</a>
+<header class="entete">
+  <div class="bandeau">
+    <a class="marque" href="../">De Stembus</a>
+    <nav class="principale" aria-label="Hoofdnavigatie">
+      <ul><li><a href="../">Start</a></li><li><a href="../simulator/">De simulator</a></li><li><a href="../kamer/">De Kamer</a></li><li><a href="../parlementen/">De parlementen</a></li><li><a href="../regels/">De regels</a></li><li><a href="../methode/" aria-current="page">De methode</a></li><li><a href="../actualiteit/">Actualiteit</a></li></ul>
+    </nav>
+    <a class="langue" href="https://ouaisfieu.github.io/election/methode/" hreflang="fr" lang="fr">Français</a>
+  </div>
+  <nav class="fil" aria-label="Kruimelpad"><ol><li><a href="../../nl/">Start</a></li><li aria-current="page">De methode</li></ol></nav>
+</header>
+<main id="contenu">
+<h1>De methode</h1>
+<p class="chapeau">Deze simulator voorspelt niets. Hij berekent de gevolgen van hypothesen die u kiest. Deze pagina publiceert het model volledig.</p>
+<h2>1. De gegevens</h2>
+<p>De stemmenaantallen komen van de pagina's « kieskring » van de FOD Binnenlandse Zaken. Ze worden letterlijk overgenomen; de percentages en zetels worden <em>herberekend</em>.</p>
+<div class="chiffres">
+<div class="chiffre"><b>6 984 906</b><span>overgenomen geldige stemmen voor de Kamer</span></div>
+<div class="chiffre"><b>31</b><span>kieskringen, vijf assemblees</span></div>
+<div class="chiffre"><b>313</b><span>zetels in totaal</span></div>
+</div>
+<h2>2. De terugtest</h2>
+<p>Vóór elke simulatie wordt de motor toegepast op de werkelijke stemmen van 2024 en vergeleken met de officiële uitslag.</p>
+<div class="defile"><table><thead><tr><th>Assemblee</th><th class="n">Zetels</th><th class="n">Kieskringen</th><th class="n">Verkeerd geplaatste zetels</th><th>Oorzaak</th></tr></thead><tbody>
+<tr><td>Kamer van volksvertegenwoordigers</td><td class="n">150</td><td class="n">11</td><td class="n">0</td><td>—</td></tr>
+<tr><td>Vlaams Parlement</td><td class="n">124</td><td class="n">6</td><td class="n">0</td><td>—</td></tr>
+<tr><td>Waals Parlement</td><td class="n">75</td><td class="n">11</td><td class="n">8</td><td>provinciale lijstenverbinding, niet geïmplementeerd</td></tr>
+<tr><td>Brussels Parlement</td><td class="n">89</td><td class="n">2</td><td class="n">1</td><td>laatste zetel van de Franse taalgroep: D'Hondt op de gepubliceerde cijfers geeft MR 19 en PTB 16, de uitslag geeft MR 20 en PTB 15</td></tr>
+<tr><td>Parlement van de Duitstalige Gemeenschap</td><td class="n">25</td><td class="n">1</td><td class="n">0</td><td>—</td></tr>
+</tbody></table></div>
+<div class="encart"><p>De Kamer — de kern van het spel — wordt exact gereproduceerd, zetel voor zetel. Ook het Vlaams en het Duitstalige Parlement. De twee resterende afwijkingen worden gedocumenteerd in plaats van met de hand gecorrigeerd.</p></div>
+<h2>3. De stemverschuiving</h2>
+<p>Het model vertrekt van een aandeel per lijst en per gewest, en telt daar de verschuivingen bij die horen bij de gekozen uitkomsten.</p>
+<p>De verschuiving wordt <em>evenredig</em> toegepast: de stemmen van elke lijst in elke kieskring worden vermenigvuldigd met de verhouding tussen doelaandeel en aandeel van 2024.</p>
+<h3>De volledige verschuivingsmatrix</h3>
+<p>Achttien uitkomsten, elk met haar vector.</p>
+<div class="defile"><table><thead><tr><th>IJkmoment</th><th>Uitkomst</th><th>Verschuiving, in punten</th><th class="n">Marge</th></tr></thead><tbody>
+<tr><td>Het begrotingsconclaaf van najaar 2026</td><td>Een overwegend structureel akkoord</td><td><strong>VL</strong> N-VA +1,2, Vlaams Belang −0,8, Vooruit −0,6, cd&amp;v +0,4, PVDA +0,4 · <strong>WA</strong> MR +0,9, PS −0,7, PTB +0,6, Les Engagés +0,5 · <strong>BXL</strong> MR +0,7, PS −0,5, PTB +0,5, Les Engagés +0,3</td><td class="n">±1,5</td></tr>
+<tr><td>Het begrotingsconclaaf van najaar 2026</td><td>Een akkoord in schijn</td><td><strong>VL</strong> Vlaams Belang +1,4, N-VA −0,9, PVDA +0,7, Vooruit −0,4, cd&amp;v −0,3 · <strong>WA</strong> PTB +1,3, MR −1,0, Les Engagés −0,4, PS +0,3 · <strong>BXL</strong> PTB +1,2, MR −0,9, Les Engagés −0,3, PS +0,2</td><td class="n">±1,5</td></tr>
+<tr><td>Het begrotingsconclaaf van najaar 2026</td><td>Mislukking en crisis</td><td><strong>VL</strong> Vlaams Belang +2,6, N-VA −1,6, PVDA +0,9, Vooruit −0,8, cd&amp;v −0,5, Groen +0,2 · <strong>WA</strong> PTB +2,2, MR −1,8, Les Engagés −1,0, PS +0,6, Ecolo +0,3 · <strong>BXL</strong> PTB +2,0, MR −1,6, Les Engagés −0,8, PS +0,5, Ecolo +0,3</td><td class="n">±2,5</td></tr>
+<tr><td>De pensioenen en het sociaal overleg</td><td>De hervorming wordt doorgeduwd</td><td><strong>VL</strong> PVDA +1,3, Vooruit −1,0, Vlaams Belang +0,7, cd&amp;v −0,4, N-VA +0,3 · <strong>WA</strong> PTB +1,6, MR −0,9, Les Engagés −0,6, PS +0,5 · <strong>BXL</strong> PTB +1,5, MR −0,8, Les Engagés −0,5, PS +0,4</td><td class="n">±1,5</td></tr>
+<tr><td>De pensioenen en het sociaal overleg</td><td>Een onderhandeld compromis</td><td><strong>VL</strong> Vooruit +1,0, N-VA −0,6, cd&amp;v +0,5, Vlaams Belang −0,3, PVDA −0,3 · <strong>WA</strong> PS +0,6, PTB −0,6, Les Engagés +0,5, MR −0,5 · <strong>BXL</strong> PS +0,6, PTB −0,6, Les Engagés +0,4, MR −0,4</td><td class="n">±1,2</td></tr>
+<tr><td>De pensioenen en het sociaal overleg</td><td>De terugtrekking</td><td><strong>VL</strong> Vlaams Belang +1,1, N-VA −1,0, Vooruit +0,4, PVDA +0,3 · <strong>WA</strong> MR −1,1, PTB +0,8, PS +0,5, Les Engagés −0,2 · <strong>BXL</strong> MR −1,0, PTB +0,8, PS +0,4</td><td class="n">±1,5</td></tr>
+<tr><td>De rechtsstaat: GRECO, Commissie, justitie</td><td>Een aanpassing aan de aanbevelingen</td><td><strong>VL</strong> Vlaams Belang −0,9, Groen +0,5, cd&amp;v +0,4, PVDA −0,3, N-VA +0,2 · <strong>WA</strong> Ecolo +0,6, Les Engagés +0,5, PTB −0,5, MR +0,3 · <strong>BXL</strong> Ecolo +0,7, PTB −0,6, Les Engagés +0,4, MR +0,3</td><td class="n">±1,2</td></tr>
+<tr><td>De rechtsstaat: GRECO, Commissie, justitie</td><td>Het status quo</td><td><strong>VL</strong> Vlaams Belang +0,9, PVDA +0,5, N-VA −0,4, cd&amp;v −0,3, Open Vld −0,3 · <strong>WA</strong> PTB +0,9, MR −0,4, PS −0,4, Les Engagés −0,2 · <strong>BXL</strong> PTB +1,0, MR −0,4, PS −0,4</td><td class="n">±1,0</td></tr>
+<tr><td>De rechtsstaat: GRECO, Commissie, justitie</td><td>De verklaring van niet-naleving</td><td><strong>VL</strong> Vlaams Belang +1,5, PVDA +0,7, N-VA −0,7, cd&amp;v −0,5, Open Vld −0,4, Groen +0,3 · <strong>WA</strong> PTB +1,4, MR −0,8, PS −0,6, Ecolo +0,4, Les Engagés −0,4 · <strong>BXL</strong> PTB +1,5, MR −0,8, PS −0,6, Ecolo +0,5</td><td class="n">±1,8</td></tr>
+<tr><td>De rating en de schuldenlast</td><td>Stabilisering</td><td><strong>VL</strong> N-VA +0,8, Vlaams Belang −0,5, Open Vld +0,3, PVDA −0,3 · <strong>WA</strong> MR +0,8, PTB −0,4, Les Engagés +0,3, PS −0,3 · <strong>BXL</strong> MR +0,7, PTB −0,4, Les Engagés +0,2</td><td class="n">±1,0</td></tr>
+<tr><td>De rating en de schuldenlast</td><td>Een nieuwe verlaging</td><td><strong>VL</strong> Vlaams Belang +1,3, N-VA −0,8, PVDA +0,6, Vooruit −0,4, cd&amp;v −0,3 · <strong>WA</strong> PTB +1,2, MR −1,1, PS +0,3, Les Engagés −0,3 · <strong>BXL</strong> PTB +1,2, MR −1,0, PS +0,3</td><td class="n">±1,5</td></tr>
+<tr><td>De rating en de schuldenlast</td><td>Een renteschok</td><td><strong>VL</strong> Vlaams Belang +1,8, PVDA +0,9, Vooruit −0,6, N-VA −0,5, cd&amp;v −0,5, Open Vld −0,5 · <strong>WA</strong> PTB +1,7, MR −1,0, Les Engagés −0,5, PS −0,3, Ecolo +0,3 · <strong>BXL</strong> PTB +1,7, MR −1,0, PS −0,3, Ecolo +0,3</td><td class="n">±2,2</td></tr>
+<tr><td>Migratie, veiligheid en uitvoering van rechterlijke beslissingen</td><td>De bewuste verstrakking</td><td><strong>VL</strong> N-VA +1,1, Vlaams Belang +0,6, Groen −0,4, cd&amp;v −0,3, Vooruit −0,3 · <strong>WA</strong> MR +0,7, Ecolo −0,4, PS −0,3, Les Engagés +0,2 · <strong>BXL</strong> Ecolo −0,5, MR +0,4, PTB +0,4, PS −0,3</td><td class="n">±1,5</td></tr>
+<tr><td>Migratie, veiligheid en uitvoering van rechterlijke beslissingen</td><td>De bindende rechterlijke uitspraak</td><td><strong>VL</strong> Vlaams Belang +0,9, N-VA −0,6, Groen +0,5, cd&amp;v +0,2 · <strong>WA</strong> Ecolo +0,6, MR −0,6, PTB +0,3, Les Engagés +0,2 · <strong>BXL</strong> Ecolo +0,8, MR −0,7, PTB +0,4</td><td class="n">±1,3</td></tr>
+<tr><td>Migratie, veiligheid en uitvoering van rechterlijke beslissingen</td><td>De uitvoeringscrisis</td><td><strong>VL</strong> Vlaams Belang +1,6, PVDA +0,5, N-VA −0,5, cd&amp;v −0,4, Open Vld −0,3, Groen +0,3 · <strong>WA</strong> PTB +1,2, MR −0,7, PS −0,5, Ecolo +0,4, Les Engagés −0,3 · <strong>BXL</strong> PTB +1,3, MR −0,7, Ecolo +0,5, PS −0,5</td><td class="n">±1,8</td></tr>
+<tr><td>Het einde van de legislatuur</td><td>De legislatuur gaat tot het einde</td><td><strong>VL</strong> N-VA +0,6, Vlaams Belang −0,4, cd&amp;v +0,3 · <strong>WA</strong> MR +0,5, Les Engagés +0,3, PTB −0,3 · <strong>BXL</strong> MR +0,4, PTB −0,3, Les Engagés +0,2</td><td class="n">±1,0</td></tr>
+<tr><td>Het einde van de legislatuur</td><td>De breuk en vervroegde verkiezingen</td><td><strong>VL</strong> Vlaams Belang +1,7, PVDA +0,6, N-VA −0,6, cd&amp;v −0,6, Vooruit −0,6, Open Vld −0,4 · <strong>WA</strong> PTB +1,5, MR −0,9, Les Engagés −0,5, PS −0,4, Ecolo +0,3 · <strong>BXL</strong> PTB +1,6, MR −0,9, Ecolo +0,4, PS −0,4, Les Engagés −0,4</td><td class="n">±2,0</td></tr>
+<tr><td>Het einde van de legislatuur</td><td>De lopende zaken</td><td><strong>VL</strong> Vlaams Belang +2,0, N-VA −0,8, PVDA +0,7, Vooruit −0,7, cd&amp;v −0,6, Open Vld −0,5 · <strong>WA</strong> PTB +1,8, MR −1,0, PS −0,6, Les Engagés −0,6, Ecolo +0,4 · <strong>BXL</strong> PTB +1,9, MR −1,0, PS −0,6, Ecolo +0,5, Les Engagés −0,5</td><td class="n">±2,2</td></tr>
+</tbody></table></div>
+<h2>4. De cohesie en de uitkomsten</h2>
+<p>De cohesie van een coalitie start op 64 en wordt zo gecorrigeerd.</p>
+<p>De beslissingsboom, in deze volgorde toegepast:</p><ol>
+<li><strong>Zonder regering</strong> — Er is geen coalitie gevormd: België blijft in lopende zaken.</li>
+<li><strong>De val</strong> — Cohesie onder 25 op het einde van de legislatuur.</li>
+<li><strong>De grondwetgever</strong> — Een hervorming met bijzondere-wet- of herzieningslast werd aangenomen.</li>
+<li><strong>De hervormer</strong> — Rechtsstaatwinst van minstens 5 punten.</li>
+<li><strong>De boekhouder</strong> — Begrotingsdoel gehaald: minstens 10 miljard euro structureel.</li>
+<li><strong>Verlengd</strong> — Geen van de vorige voorwaarden: de legislatuur eindigt zonder de rekeningen of de regels te veranderen.</li>
+</ol>
+<h2>5. Wat deze simulator niet doet</h2>
+<ul>
+<li>Hij modelleert het devolutief effect niet: hij kent zetels toe aan lijsten, nooit aan personen.</li>
+<li>Hij implementeert de provinciale lijstenverbinding van het Waals Parlement niet.</li>
+<li>Hij past de opkomst en de blanco stemmen niet aan.</li>
+<li>Hij weegt de peilingen niet en maakt er geen gemiddelde van.</li>
+<li>Hij rangschikt geen enkele partij en beveelt geen stem aan.</li>
+<li>Hij heeft geen Duitse versie, terwijl de Duitstalige Gemeenschap op dezelfde dag haar parlement verkiest.</li>
+</ul>
+</main>
+<footer class="pied">
+  <p class="pied-liens"><a href="../bronnen/">De bronnen</a> · <a href="../woordenlijst/">Woordenlijst</a> · <a href="../coalities/">De coalities</a> · <a href="../netwerk/">Het netwerk</a></p>
+  <p>Tekst en code onder CC BY-SA 4.0. Geen trackers, geen cookies, geen externe lettertypes, geen netwerkoproepen.</p>
+  <p>Laatst bijgewerkt : <time datetime="2026-08-18">2026-08-18</time> ·
+     <a href="https://github.com/ouaisfieu/election" rel="noopener">Broncode</a></p>
+</footer>
+
+</body>
+</html>

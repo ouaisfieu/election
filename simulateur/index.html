@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Le simulateur : campagne, scrutin, coalition, législature — Le Scrutin</title>
+<meta name="description" content="Simulez les élections belges de 2029 en quatre actes : six échéances datées, la répartition des sièges à la clé D&#x27;Hondt, la formation d&#x27;une coalition et la législature qui suit.">
+<link rel="canonical" href="https://ouaisfieu.github.io/election/simulateur/">
+<link rel="alternate" hreflang="fr" href="https://ouaisfieu.github.io/election/simulateur/">
+<link rel="alternate" hreflang="nl" href="https://ouaisfieu.github.io/election/nl/simulator/">
+<link rel="alternate" hreflang="x-default" href="https://ouaisfieu.github.io/election/simulateur/">
+<meta name="author" content="ouaisfieu">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Le Scrutin">
+<meta property="og:locale" content="fr_BE">
+<meta property="og:title" content="Le simulateur : campagne, scrutin, coalition, législature — Le Scrutin">
+<meta property="og:description" content="Simulez les élections belges de 2029 en quatre actes : six échéances datées, la répartition des sièges à la clé D&#x27;Hondt, la formation d&#x27;une coalition et la législature qui suit.">
+<meta property="og:url" content="https://ouaisfieu.github.io/election/simulateur/">
+<meta property="og:image" content="https://ouaisfieu.github.io/election/assets/og/simulateur.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Le simulateur : campagne, scrutin, coalition, législature — Le Scrutin">
+<meta name="twitter:description" content="Simulez les élections belges de 2029 en quatre actes : six échéances datées, la répartition des sièges à la clé D&#x27;Hondt, la formation d&#x27;une coalition et la législature qui suit.">
+<meta name="twitter:image" content="https://ouaisfieu.github.io/election/assets/og/simulateur.png">
+<meta name="theme-color" content="#12151c">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../assets/og/accueil.png">
+<link rel="manifest" href="../manifeste.webmanifest">
+<link rel="alternate" type="application/atom+xml" title="Le Scrutin" href="../flux.xml">
+<link rel="stylesheet" href="../assets/css/style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Accueil","item":"https://ouaisfieu.github.io/election/"},{"@type":"ListItem","position":2,"name":"Le simulateur","item":"https://ouaisfieu.github.io/election/simulateur/"}]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Game","name":"Le Scrutin — le simulateur","url":"https://ouaisfieu.github.io/election/simulateur/","inLanguage":"fr","isAccessibleForFree":true,"gamePlatform":"Web","applicationCategory":"GameApplication","description":"Quatre actes : campagne, scrutin, coalition, législature."}</script>
+</head>
+<body>
+<a class="saut" href="#contenu">Aller au contenu</a>
+<header class="entete">
+  <div class="bandeau">
+    <a class="marque" href="../">Le Scrutin</a>
+    <nav class="principale" aria-label="Navigation principale">
+      <ul><li><a href="../">Accueil</a></li><li><a href="../simulateur/" aria-current="page">Le simulateur</a></li><li><a href="../chambre/">La Chambre</a></li><li><a href="../parlements/">Les parlements</a></li><li><a href="../regles/">Les règles</a></li><li><a href="../methode/">La méthode</a></li><li><a href="../actualites/">L&#x27;actualité</a></li></ul>
+    </nav>
+    <a class="langue" href="https://ouaisfieu.github.io/election/nl/simulator/" hreflang="nl" lang="nl">Nederlands</a>
+  </div>
+  <nav class="fil" aria-label="Fil d'Ariane"><ol><li><a href="../">Accueil</a></li><li aria-current="page">Le simulateur</li></ol></nav>
+</header>
+<main id="contenu">
+<h1>Le simulateur</h1>
+<p class="chapeau">Quatre actes. Vous choisissez un point de départ, six issues d'échéances réelles, une coalition et un accord de gouvernement. Le reste est de l'arithmétique, et elle est affichée. Tout tient dans cette page ; rien n'est envoyé nulle part.</p>
+<noscript><p class="sansjs">Le simulateur a besoin de JavaScript pour calculer. Sans lui, cette page reste lisible : les six échéances, leurs issues et le report de voix que le modèle associe à chacune sont écrits ci-dessous, et la page Méthode publie le calcul complet.</p></noscript>
+<section class="acte" id="depart"><span class="numero">Avant de commencer</span>
+<h2>Le point de départ</h2>
+<p>Un sondage n'est pas une prévision. Choisir celui de mars ou celui de juin 2026 change le résultat de plusieurs dizaines de sièges : c'est précisément ce que le simulateur veut rendre visible.</p>
+<fieldset><legend>Point de départ</legend><div class="choix">
+<label><input type="radio" name="depart" value="resultat2024"> <span><strong>Le vote de 2024</strong><small>SPF Intérieur — résultat officiel — Aucun report : le modèle part du dernier vote réellement exprimé. C&#x27;est le seul point de départ qui ne repose sur aucune enquête.</small></span></label>
+<label><input type="radio" name="depart" value="enquete2026"> <span><strong>Enquête nationale 2026</strong><small>UAntwerpen et ULB — terrain mars-avril 2026, marge ±2,4 points — Enquête académique. La N-VA reste devant en Flandre ; le PS redevient premier en Wallonie ; le PTB est premier à Bruxelles.</small></span></label>
+<label><input type="radio" name="depart" value="grande-enquete-mars2026"> <span><strong>Grande Enquête, mars 2026</strong><small>HLN, VTM Nieuws, RTL et Le Soir — publiée le 14 mars 2026 — N-VA et Vlaams Belang à 0,1 point l&#x27;un de l&#x27;autre en Flandre. Les parts wallonnes et bruxelloises sont celles de mars 2026.</small></span></label>
+<label><input type="radio" name="depart" value="barometre-juin2026" checked> <span><strong>Grand Baromètre, juin 2026</strong><small>RTL et Le Soir — publié le 12 juin 2026 — Première enquête où le Vlaams Belang passe nettement devant la N-VA en Flandre. Publiée à trois ans du scrutin : à prendre comme tel.</small></span></label>
+</div></fieldset></section>
+<section class="acte" id="campagne"><span class="numero">Acte I</span>
+<h2>La campagne : six échéances, de septembre 2026 à 2029</h2>
+<p>Chaque échéance est datée et documentée. Aucune issue n'est présentée comme souhaitable ni comme probable. À côté de chacune, le report de voix que le modèle lui associe, en points de pourcentage, avec sa bande d'incertitude et sa justification.</p>
+<fieldset id="ech-conclave"><legend>1. Le conclave budgétaire de l&#x27;automne 2026 — <time datetime="2026-09-30">2026-09-30</time></legend>
+<p>Le comité de monitoring de juillet 2026 chiffre l&#x27;écart à 7,7 milliards d&#x27;euros d&#x27;ici 2029 et 9,8 milliards d&#x27;ici 2031, contre 4,9 milliards estimés en mars. Le 10 juillet 2026, le gouvernement s&#x27;est fixé 10 milliards d&#x27;ici 2029, dont « plus des deux tiers » structurels. Le conclave s&#x27;ouvre fin septembre ; la déclaration de politique fédérale est attendue le deuxième mardi d&#x27;octobre.</p>
+<div class="choix">
+<label><input type="radio" name="conclave" value="accord-structurel" checked> <span><strong>Un accord majoritairement structurel</strong><small>Les 10 milliards sont bouclés, aux deux tiers par des mesures permanentes : marché du travail, soins de santé, fiscalité du capital. La coalition tient, le coût politique est réparti.</small><small style="margin-top:.4rem"><strong>Flandre</strong> : N-VA +1,2, Vlaams Belang −0,8, Vooruit −0,6, cd&amp;v +0,4, PVDA +0,4 · <strong>Wallonie</strong> : MR +0,9, PS −0,7, PTB +0,6, Les Engagés +0,5 · <strong>Bruxelles</strong> : MR +0,7, PS −0,5, PTB +0,5, Les Engagés +0,3 — bande ±1,5 point. Un accord tenu profite d&#x27;abord aux partis qui le revendiquent et pénalise les partenaires qui en portent le coût social ; l&#x27;opposition de gauche capitalise sur les mesures permanentes.</small></span></label>
+<label><input type="radio" name="conclave" value="accord-facade"> <span><strong>Un accord de façade</strong><small>Le chiffre est annoncé mais reposant sur des recettes une fois, des reports et des « efforts à préciser ». La Cour des comptes le relève en décembre, comme elle l&#x27;a fait pour le budget 2026.</small><small style="margin-top:.4rem"><strong>Flandre</strong> : Vlaams Belang +1,4, N-VA −0,9, PVDA +0,7, Vooruit −0,4, cd&amp;v −0,3 · <strong>Wallonie</strong> : PTB +1,3, MR −1,0, Les Engagés −0,4, PS +0,3 · <strong>Bruxelles</strong> : PTB +1,2, MR −0,9, Les Engagés −0,3, PS +0,2 — bande ±1,5 point. L&#x27;écart entre l&#x27;annonce et le contrôle nourrit les oppositions aux deux extrémités et coûte aux partis qui ont porté le chiffre.</small></span></label>
+<label><input type="radio" name="conclave" value="echec"> <span><strong>L&#x27;échec et la crise</strong><small>Le conclave n&#x27;aboutit pas dans les délais. Le gouvernement fonctionne en douzièmes provisoires ; l&#x27;hypothèse d&#x27;une démission est ouverte. L&#x27;article 46 de la Constitution encadre alors la dissolution.</small><small style="margin-top:.4rem"><strong>Flandre</strong> : Vlaams Belang +2,6, N-VA −1,6, PVDA +0,9, Vooruit −0,8, cd&amp;v −0,5, Groen +0,2 · <strong>Wallonie</strong> : PTB +2,2, MR −1,8, Les Engagés −1,0, PS +0,6, Ecolo +0,3 · <strong>Bruxelles</strong> : PTB +2,0, MR −1,6, Les Engagés −0,8, PS +0,5, Ecolo +0,3 — bande ±2,5 point. Une crise budgétaire ouverte a historiquement profité aux partis hors coalition ; l&#x27;ampleur du report est la plus incertaine du modèle.</small></span></label>
+</div></fieldset>
+<fieldset id="ech-pensions"><legend>2. Les pensions et la concertation sociale — <time datetime="2027-03-01">2027-03-01</time></legend>
+<p>Le front commun syndical a mené des grèves nationales en 2025 et 2026, dont celle du 12 mars 2026 sur les pensions et l&#x27;indexation. Les magistrats eux-mêmes se sont mis en grève sur la question des pensions. La trajectoire budgétaire suppose un rendement des mesures pensions que la Cour des comptes juge incertain.</p>
+<div class="choix">
+<label><input type="radio" name="pensions" value="impose" checked> <span><strong>La réforme passe en force</strong><small>Le texte est adopté sans accord des interlocuteurs sociaux. Le rendement budgétaire est acquis ; le conflit social s&#x27;installe.</small><small style="margin-top:.4rem"><strong>Flandre</strong> : PVDA +1,3, Vooruit −1,0, Vlaams Belang +0,7, cd&amp;v −0,4, N-VA +0,3 · <strong>Wallonie</strong> : PTB +1,6, MR −0,9, Les Engagés −0,6, PS +0,5 · <strong>Bruxelles</strong> : PTB +1,5, MR −0,8, Les Engagés −0,5, PS +0,4 — bande ±1,5 point. Le conflit social bénéficie d&#x27;abord aux formations qui l&#x27;organisent ou le portent, et coûte au partenaire social-démocrate de la coalition.</small></span></label>
+<label><input type="radio" name="pensions" value="negocie"> <span><strong>Un compromis négocié</strong><small>Accord partiel avec les interlocuteurs sociaux : calendrier étalé, rendement réduit. L&#x27;écart budgétaire se creuse d&#x27;autant.</small><small style="margin-top:.4rem"><strong>Flandre</strong> : Vooruit +1,0, N-VA −0,6, cd&amp;v +0,5, Vlaams Belang −0,3, PVDA −0,3 · <strong>Wallonie</strong> : PS +0,6, PTB −0,6, Les Engagés +0,5, MR −0,5 · <strong>Bruxelles</strong> : PS +0,6, PTB −0,6, Les Engagés +0,4, MR −0,4 — bande ±1,2 point. Un compromis visible valorise les partis qui l&#x27;ont négocié et démobilise partiellement les oppositions de rupture.</small></span></label>
+<label><input type="radio" name="pensions" value="recul"> <span><strong>Le recul</strong><small>La réforme est retirée ou vidée. Le coût social disparaît, le trou budgétaire demeure et la crédibilité de la trajectoire s&#x27;érode.</small><small style="margin-top:.4rem"><strong>Flandre</strong> : Vlaams Belang +1,1, N-VA −1,0, Vooruit +0,4, PVDA +0,3 · <strong>Wallonie</strong> : MR −1,1, PTB +0,8, PS +0,5, Les Engagés −0,2 · <strong>Bruxelles</strong> : MR −1,0, PTB +0,8, PS +0,4 — bande ±1,5 point. Un recul coûte au parti qui portait la réforme sans profiter durablement à ceux qui s&#x27;y opposaient.</small></span></label>
+</div></fieldset>
+<fieldset id="ech-etat-de-droit"><legend>3. L&#x27;état de droit : GRECO, Commission, justice — <time datetime="2027-07-01">2027-07-01</time></legend>
+<p>L&#x27;addendum GrecoRC5(2025) de novembre 2025 ne considère que 8 recommandations sur 22 comme traitées de manière satisfaisante ; l&#x27;ultime étape de la procédure est une déclaration publique de non-conformité. Le rapport état de droit de la Commission européenne du 17 juillet 2026 relève que « le respect par le gouvernement des décisions définitives des tribunaux et des astreintes reste problématique », et aucune avancée sur le lobbying ni sur le pantouflage. La justice pèse environ 0,5 % du budget de l&#x27;État après quelque 14 % de coupes cumulées.</p>
+<div class="choix">
+<label><input type="radio" name="etat-de-droit" value="mise-en-conformite" checked> <span><strong>Une mise en conformité</strong><small>Registre de lobbying contraignant, contrôle externe du financement des partis, refinancement partiel de la justice. Le dossier GRECO se referme.</small><small style="margin-top:.4rem"><strong>Flandre</strong> : Vlaams Belang −0,9, Groen +0,5, cd&amp;v +0,4, PVDA −0,3, N-VA +0,2 · <strong>Wallonie</strong> : Ecolo +0,6, Les Engagés +0,5, PTB −0,5, MR +0,3 · <strong>Bruxelles</strong> : Ecolo +0,7, PTB −0,6, Les Engagés +0,4, MR +0,3 — bande ±1,2 point. Le grief d&#x27;entre-soi institutionnel alimente le vote protestataire ; le traiter le désamorce en partie.</small></span></label>
+<label><input type="radio" name="etat-de-droit" value="statu-quo"> <span><strong>Le statu quo</strong><small>Rien ne bouge : le financement des partis reste contrôlé par une commission parlementaire, le lobbying reste non régulé.</small><small style="margin-top:.4rem"><strong>Flandre</strong> : Vlaams Belang +0,9, PVDA +0,5, N-VA −0,4, cd&amp;v −0,3, Open Vld −0,3 · <strong>Wallonie</strong> : PTB +0,9, MR −0,4, PS −0,4, Les Engagés −0,2 · <strong>Bruxelles</strong> : PTB +1,0, MR −0,4, PS −0,4 — bande ±1,0 point. L&#x27;indice de perception de la corruption est passé de 77 à 69 entre 2016 et 2025 ; l&#x27;inaction entretient cette pente.</small></span></label>
+<label><input type="radio" name="etat-de-droit" value="non-conformite"> <span><strong>La déclaration de non-conformité</strong><small>Le GRECO va au bout de la règle 32. Le cadre financier européen 2028-2034 lie état de droit et financement : le dossier devient budgétaire.</small><small style="margin-top:.4rem"><strong>Flandre</strong> : Vlaams Belang +1,5, PVDA +0,7, N-VA −0,7, cd&amp;v −0,5, Open Vld −0,4, Groen +0,3 · <strong>Wallonie</strong> : PTB +1,4, MR −0,8, PS −0,6, Ecolo +0,4, Les Engagés −0,4 · <strong>Bruxelles</strong> : PTB +1,5, MR −0,8, PS −0,6, Ecolo +0,5 — bande ±1,8 point. Une sanction internationale explicite est un fait public daté, utilisable par toutes les oppositions.</small></span></label>
+</div></fieldset>
+<fieldset id="ech-notation"><legend>4. La note souveraine et la charge de la dette — <time datetime="2028-01-15">2028-01-15</time></legend>
+<p>Le 17 avril 2026, Moody&#x27;s a abaissé la Belgique de Aa3 à A1 : le pays perd son double A. La Wallonie et les Communautés ont été dégradées le 22 avril. Les charges d&#x27;intérêts fédérales dépassent 10 milliards d&#x27;euros depuis juillet 2026. Le déficit est projeté à 5,2 % du PIB en 2029 et la dette à 117,1 % du PIB.</p>
+<div class="choix">
+<label><input type="radio" name="notation" value="stabilisation" checked> <span><strong>La stabilisation</strong><small>Perspective ramenée à stable, écart de taux contenu. Le coût de la dette cesse de progresser plus vite que le PIB nominal.</small><small style="margin-top:.4rem"><strong>Flandre</strong> : N-VA +0,8, Vlaams Belang −0,5, Open Vld +0,3, PVDA −0,3 · <strong>Wallonie</strong> : MR +0,8, PTB −0,4, Les Engagés +0,3, PS −0,3 · <strong>Bruxelles</strong> : MR +0,7, PTB −0,4, Les Engagés +0,2 — bande ±1,0 point. Le crédit accordé à la gestion budgétaire profite aux partis qui en ont fait leur ligne principale.</small></span></label>
+<label><input type="radio" name="notation" value="nouvelle-degradation"> <span><strong>Une nouvelle dégradation</strong><small>Une deuxième dégradation en moins de deux ans. Le débat se déplace sur la soutenabilité, et sur qui paie.</small><small style="margin-top:.4rem"><strong>Flandre</strong> : Vlaams Belang +1,3, N-VA −0,8, PVDA +0,6, Vooruit −0,4, cd&amp;v −0,3 · <strong>Wallonie</strong> : PTB +1,2, MR −1,1, PS +0,3, Les Engagés −0,3 · <strong>Bruxelles</strong> : PTB +1,2, MR −1,0, PS +0,3 — bande ±1,5 point. L&#x27;échec sur le terrain choisi par la coalition coûte davantage que sur un terrain qu&#x27;elle n&#x27;a pas choisi.</small></span></label>
+<label><input type="radio" name="notation" value="choc-de-taux"> <span><strong>Un choc de taux</strong><small>Un choc externe fait monter l&#x27;écart de taux. Les 21 milliards de charges d&#x27;intérêts projetés pour 2030 par le Bureau du Plan deviennent une contrainte immédiate.</small><small style="margin-top:.4rem"><strong>Flandre</strong> : Vlaams Belang +1,8, PVDA +0,9, Vooruit −0,6, N-VA −0,5, cd&amp;v −0,5, Open Vld −0,5 · <strong>Wallonie</strong> : PTB +1,7, MR −1,0, Les Engagés −0,5, PS −0,3, Ecolo +0,3 · <strong>Bruxelles</strong> : PTB +1,7, MR −1,0, PS −0,3, Ecolo +0,3 — bande ±2,2 point. Un choc exogène est le report le moins prévisible du modèle : il déplace le vote sans que le gouvernement en soit l&#x27;auteur.</small></span></label>
+</div></fieldset>
+<fieldset id="ech-migration"><legend>5. Migration, sécurité et exécution des décisions de justice — <time datetime="2028-06-01">2028-06-01</time></legend>
+<p>Le 27 mars 2026, le Conseil d&#x27;État a suspendu des instructions ministérielles qui contournaient un arrêt de la Cour constitutionnelle en matière d&#x27;accueil ; la ministre a maintenu une politique au cas par cas. Le rapport européen du 17 juillet 2026 relève que l&#x27;exécution des astreintes reste problématique. Le nouveau Code pénal est entré en vigueur le 1er septembre 2026.</p>
+<div class="choix">
+<label><input type="radio" name="migration" value="durcissement" checked> <span><strong>Le durcissement assumé</strong><small>Le cadre légal est modifié pour aligner le droit sur la pratique. Le contentieux se déplace vers les juridictions européennes.</small><small style="margin-top:.4rem"><strong>Flandre</strong> : N-VA +1,1, Vlaams Belang +0,6, Groen −0,4, cd&amp;v −0,3, Vooruit −0,3 · <strong>Wallonie</strong> : MR +0,7, Ecolo −0,4, PS −0,3, Les Engagés +0,2 · <strong>Bruxelles</strong> : Ecolo −0,5, MR +0,4, PTB +0,4, PS −0,3 — bande ±1,5 point. Le thème est plus saillant en Flandre : les médias néerlandophones lui donnent une place plus grande, ce que la recherche documente.</small></span></label>
+<label><input type="radio" name="migration" value="arbitrage-judiciaire"> <span><strong>L&#x27;arbitrage judiciaire contraignant</strong><small>Les juridictions imposent l&#x27;exécution ; l&#x27;État paie les astreintes et adapte sa politique. La contrainte judiciaire devient effective.</small><small style="margin-top:.4rem"><strong>Flandre</strong> : Vlaams Belang +0,9, N-VA −0,6, Groen +0,5, cd&amp;v +0,2 · <strong>Wallonie</strong> : Ecolo +0,6, MR −0,6, PTB +0,3, Les Engagés +0,2 · <strong>Bruxelles</strong> : Ecolo +0,8, MR −0,7, PTB +0,4 — bande ±1,3 point. Une contrainte judiciaire nourrit à la fois le camp qui la réclamait et le discours anti-institutionnel : le report est bilatéral.</small></span></label>
+<label><input type="radio" name="migration" value="crise-execution"> <span><strong>La crise d&#x27;exécution</strong><small>Les décisions ne sont ni exécutées ni contestées : les astreintes s&#x27;accumulent, l&#x27;autorité de la chose jugée s&#x27;effrite.</small><small style="margin-top:.4rem"><strong>Flandre</strong> : Vlaams Belang +1,6, PVDA +0,5, N-VA −0,5, cd&amp;v −0,4, Open Vld −0,3, Groen +0,3 · <strong>Wallonie</strong> : PTB +1,2, MR −0,7, PS −0,5, Ecolo +0,4, Les Engagés −0,3 · <strong>Bruxelles</strong> : PTB +1,3, MR −0,7, Ecolo +0,5, PS −0,5 — bande ±1,8 point. L&#x27;inexécution durable des décisions de justice est le grief que la Commission européenne relève depuis plusieurs rapports.</small></span></label>
+</div></fieldset>
+<fieldset id="ech-fin-de-legislature"><legend>6. La fin de législature — <time datetime="2029-03-01">2029-03-01</time></legend>
+<p>Les élections fédérales et régionales sont fixées au même jour, en principe en mai ou juin 2029. Une dissolution anticipée est encadrée par l&#x27;article 46 de la Constitution — trois cas seulement — et l&#x27;article 195 permet une dissolution automatique par la publication d&#x27;une déclaration de révision. Le scrutin doit alors se tenir dans les 40 jours.</p>
+<div class="choix">
+<label><input type="radio" name="fin-de-legislature" value="terme" checked> <span><strong>La législature va à son terme</strong><small>Le gouvernement dépose un budget 2029 et se présente devant les électeurs sur son bilan. La campagne dure ce qu&#x27;elle doit durer.</small><small style="margin-top:.4rem"><strong>Flandre</strong> : N-VA +0,6, Vlaams Belang −0,4, cd&amp;v +0,3 · <strong>Wallonie</strong> : MR +0,5, Les Engagés +0,3, PTB −0,3 · <strong>Bruxelles</strong> : MR +0,4, PTB −0,3, Les Engagés +0,2 — bande ±1,0 point. Aller au terme est en soi un résultat dans un pays où la durée de formation d&#x27;un gouvernement est un enjeu public.</small></span></label>
+<label><input type="radio" name="fin-de-legislature" value="rupture"> <span><strong>La rupture et les élections anticipées</strong><small>Un partenaire quitte la coalition. Le scrutin est avancé ; la campagne se joue sur la responsabilité de la rupture.</small><small style="margin-top:.4rem"><strong>Flandre</strong> : Vlaams Belang +1,7, PVDA +0,6, N-VA −0,6, cd&amp;v −0,6, Vooruit −0,6, Open Vld −0,4 · <strong>Wallonie</strong> : PTB +1,5, MR −0,9, Les Engagés −0,5, PS −0,4, Ecolo +0,3 · <strong>Bruxelles</strong> : PTB +1,6, MR −0,9, Ecolo +0,4, PS −0,4, Les Engagés −0,4 — bande ±2,0 point. Les ruptures de coalition ont historiquement bénéficié aux formations extérieures plutôt qu&#x27;à celle qui rompt.</small></span></label>
+<label><input type="radio" name="fin-de-legislature" value="affaires-courantes"> <span><strong>Les affaires courantes</strong><small>Le gouvernement démissionne mais reste en place. La Belgique a connu 541 jours sans gouvernement fédéral de plein exercice en 2010-2011, 236 jours en 2024-2025, et Bruxelles 613 jours en 2024-2026.</small><small style="margin-top:.4rem"><strong>Flandre</strong> : Vlaams Belang +2,0, N-VA −0,8, PVDA +0,7, Vooruit −0,7, cd&amp;v −0,6, Open Vld −0,5 · <strong>Wallonie</strong> : PTB +1,8, MR −1,0, PS −0,6, Les Engagés −0,6, Ecolo +0,4 · <strong>Bruxelles</strong> : PTB +1,9, MR −1,0, PS −0,6, Ecolo +0,5, Les Engagés −0,5 — bande ±2,2 point. La durée d&#x27;incapacité à gouverner est le grief le plus directement mesurable de la particratie belge.</small></span></label>
+</div></fieldset>
+</section>
+<section class="acte" id="scrutin"><span class="numero">Acte II</span>
+<h2>Le scrutin</h2>
+<p>Le report est appliqué à chaque circonscription, proportionnellement à la part de 2024 de chaque liste dans sa région ; la circonscription est renormalisée, puis la clé D'Hondt est appliquée avec le seuil de 5 %. Cinq assemblées sont calculées le même jour.</p>
+<div id="resultat-scrutin" aria-live="polite"></div>
+</section>
+<section class="acte" id="formation"><span class="numero">Acte III</span>
+<h2>La formation</h2>
+<p>Le site n'écarte aucune coalition de lui-même. Il vous demande quelles exclusions vous tenez pour valables en 2029, puis il énumère toutes les combinaisons majoritaires et affiche, pour chacune, ce que son arithmétique autorise.</p>
+<fieldset><legend>Exclusions déclarées</legend><div class="choix">
+<label><input type="checkbox" name="exclusion" value="cordon" checked> <span><strong>Le cordon sanitaire</strong><small>Depuis 1989, les autres partis flamands refusent publiquement toute coalition avec le Vlaams Blok puis le Vlaams Belang. L&#x27;engagement est renouvelé à chaque scrutin ; il n&#x27;a aucune valeur juridique et n&#x27;engage que ceux qui le prennent.</small></span></label>
+<label><input type="checkbox" name="exclusion" value="ptb-federal" checked> <span><strong>Le refus du PTB d&#x27;entrer au fédéral</strong><small>Le PTB-PVDA n&#x27;a jamais participé à un gouvernement fédéral et pose des conditions programmatiques que les autres formations ont jusqu&#x27;ici refusées. C&#x27;est un fait observé, pas une règle : il peut cesser d&#x27;être vrai.</small></span></label>
+</div></fieldset>
+<div id="resultat-coalitions" aria-live="polite"></div>
+</section>
+<section class="acte" id="legislature"><span class="numero">Acte IV</span>
+<h2>La législature</h2>
+<p>Huit chantiers. Chacun porte la charge normative qu'il exige réellement : une loi ordinaire, une loi spéciale — majorité dans chaque groupe linguistique et deux tiers — ou une révision de la Constitution. Un chantier que votre coalition ne peut pas porter est refusé, et le procès-verbal le dit.</p>
+<fieldset><legend>Les chantiers de l'accord</legend><div class="choix" id="chantiers">
+<label><input type="checkbox" name="chantier" value="trajectoire"> <span><strong>La trajectoire budgétaire 2029-2034</strong><small><span class="etiquette">loi ordinaire</span> Rendement visé : 10 milliards d&#x27;euros structurels sur la législature.</small></span></label>
+<label><input type="checkbox" name="chantier" value="financement-partis"> <span><strong>Le financement des partis et le contrôle externe</strong><small><span class="etiquette">loi ordinaire</span> 104 millions d&#x27;euros de dotations aux groupes et collaborateurs en 2024 ; 80 à 90 % des ressources des partis sont publiques.</small></span></label>
+<label><input type="checkbox" name="chantier" value="lobbying"> <span><strong>Un registre de lobbying contraignant et le pantouflage</strong><small><span class="etiquette">loi ordinaire</span> Grief constant de la Commission européenne et du GRECO : aucune avancée constatée au 17 juillet 2026.</small></span></label>
+<label><input type="checkbox" name="chantier" value="justice"> <span><strong>Le refinancement de la justice</strong><small><span class="etiquette">loi ordinaire</span> La justice pèse environ 0,5 % du budget de l&#x27;État après quelque 14 % de coupes cumulées.</small></span></label>
+<label><input type="checkbox" name="chantier" value="case-de-tete"> <span><strong>La suppression de l&#x27;effet dévolutif de la case de tête</strong><small><span class="etiquette">loi ordinaire</span> L&#x27;effet dévolutif transfère la moitié du pot des votes de liste aux candidats dans l&#x27;ordre décidé par le parti. 88,6 % des bourgmestres wallons désignés en 2024 étaient têtes de liste.</small></span></label>
+<label><input type="checkbox" name="chantier" value="reforme-etat"> <span><strong>Une réforme de l&#x27;État</strong><small><span class="etiquette">loi spéciale — art. 4</span> Toute modification de la répartition des compétences exige la majorité dans chaque groupe linguistique et les deux tiers au total (art. 4 de la Constitution).</small></span></label>
+<label><input type="checkbox" name="chantier" value="transaction"> <span><strong>La transaction pénale élargie</strong><small><span class="etiquette">loi ordinaire</span> Loi du 14 avril 2011, adoptée par amendement sans débat ; arrêt 83/2016 de la Cour constitutionnelle ; 1,6 million d&#x27;euros payés par ING le 5 mai 2026 sans reconnaissance de culpabilité.</small></span></label>
+<label><input type="checkbox" name="chantier" value="circonscription"> <span><strong>La circonscription fédérale</strong><small><span class="etiquette">révision — art. 195</span> Une part des sièges de la Chambre élue dans une circonscription unique : cela suppose une révision de la Constitution, donc une dissolution préalable.</small></span></label>
+</div></fieldset>
+<div id="resultat-legislature" aria-live="polite"></div>
+</section>
+<section class="acte" id="proces-verbal"><span class="numero">Le procès-verbal</span>
+<h2>Tout le calcul, ligne par ligne</h2>
+<p><button type="button" id="imprimer">Imprimer le procès-verbal</button> <button type="button" id="copier-lien">Copier le lien de cette partie</button></p>
+<div id="pv" aria-live="polite"></div>
+</section>
+</main>
+<footer class="pied">
+  <p class="pied-liens"><a href="../sources/">Les sources</a> · <a href="../glossaire/">Le glossaire</a> · <a href="../coalitions/">Les coalitions</a> · <a href="../reseau/">Le réseau</a></p>
+  <p>Texte et code sous licence CC BY-SA 4.0. Aucun traceur, aucun cookie, aucune police distante, aucun appel réseau.</p>
+  <p>Dernière mise à jour : <time datetime="2026-08-18">2026-08-18</time> ·
+     <a href="https://github.com/ouaisfieu/election" rel="noopener">Code source</a></p>
+</footer>
+<script src="../assets/data/donnees.js" defer></script><script src="../assets/js/moteur.js" defer></script><script src="../assets/js/jeu.js" defer></script>
+</body>
+</html>

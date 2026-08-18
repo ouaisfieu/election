@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>La méthode : données, report de voix, rétro-test et limites — Le Scrutin</title>
+<meta name="description" content="Le modèle publié en entier : origine des données officielles, report de voix proportionnel par région, matrice complète des dix-huit issues, rétro-test sur 2024 et limites assumées.">
+<link rel="canonical" href="https://ouaisfieu.github.io/election/methode/">
+<link rel="alternate" hreflang="fr" href="https://ouaisfieu.github.io/election/methode/">
+<link rel="alternate" hreflang="nl" href="https://ouaisfieu.github.io/election/nl/methode/">
+<link rel="alternate" hreflang="x-default" href="https://ouaisfieu.github.io/election/methode/">
+<meta name="author" content="ouaisfieu">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Le Scrutin">
+<meta property="og:locale" content="fr_BE">
+<meta property="og:title" content="La méthode : données, report de voix, rétro-test et limites — Le Scrutin">
+<meta property="og:description" content="Le modèle publié en entier : origine des données officielles, report de voix proportionnel par région, matrice complète des dix-huit issues, rétro-test sur 2024 et limites assumées.">
+<meta property="og:url" content="https://ouaisfieu.github.io/election/methode/">
+<meta property="og:image" content="https://ouaisfieu.github.io/election/assets/og/methode.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="La méthode : données, report de voix, rétro-test et limites — Le Scrutin">
+<meta name="twitter:description" content="Le modèle publié en entier : origine des données officielles, report de voix proportionnel par région, matrice complète des dix-huit issues, rétro-test sur 2024 et limites assumées.">
+<meta name="twitter:image" content="https://ouaisfieu.github.io/election/assets/og/methode.png">
+<meta name="theme-color" content="#12151c">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../assets/og/accueil.png">
+<link rel="manifest" href="../manifeste.webmanifest">
+<link rel="alternate" type="application/atom+xml" title="Le Scrutin" href="../flux.xml">
+<link rel="stylesheet" href="../assets/css/style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Accueil","item":"https://ouaisfieu.github.io/election/"},{"@type":"ListItem","position":2,"name":"La méthode","item":"https://ouaisfieu.github.io/election/methode/"}]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"La méthode du simulateur","inLanguage":"fr","datePublished":"2026-08-18","dateModified":"2026-08-18","author":{"@type":"Organization","name":"ouaisfieu"},"url":"https://ouaisfieu.github.io/election/methode/"}</script>
+</head>
+<body>
+<a class="saut" href="#contenu">Aller au contenu</a>
+<header class="entete">
+  <div class="bandeau">
+    <a class="marque" href="../">Le Scrutin</a>
+    <nav class="principale" aria-label="Navigation principale">
+      <ul><li><a href="../">Accueil</a></li><li><a href="../simulateur/">Le simulateur</a></li><li><a href="../chambre/">La Chambre</a></li><li><a href="../parlements/">Les parlements</a></li><li><a href="../regles/">Les règles</a></li><li><a href="../methode/" aria-current="page">La méthode</a></li><li><a href="../actualites/">L&#x27;actualité</a></li></ul>
+    </nav>
+    <a class="langue" href="https://ouaisfieu.github.io/election/nl/methode/" hreflang="nl" lang="nl">Nederlands</a>
+  </div>
+  <nav class="fil" aria-label="Fil d'Ariane"><ol><li><a href="../">Accueil</a></li><li aria-current="page">La méthode</li></ol></nav>
+</header>
+<main id="contenu">
+<h1>La méthode</h1>
+<p class="chapeau">Ce simulateur ne prévoit rien. Il calcule les conséquences d'hypothèses que vous choisissez. Cette page publie le modèle en entier : ses données, son report de voix, ses seuils, ses limites et l'écart mesuré entre son calcul et la proclamation de 2024.</p>
+<h2>1. Les données</h2>
+<p>Les nombres de voix proviennent des pages « circonscription électorale » du SPF Intérieur, pour les cinq assemblées élues le 9 juin 2024. Ils sont recopiés tels quels ; les pourcentages et les sièges affichés sur ce site sont <em>recalculés</em>, jamais recopiés. La construction du site échoue si la somme des voix d'une circonscription ne correspond pas au total officiel de votes valables, ou si la somme des sièges d'une assemblée ne correspond pas à son effectif légal.</p>
+<div class="chiffres">
+<div class="chiffre"><b>6 984 906</b><span>votes valables recopiés pour la Chambre</span></div>
+<div class="chiffre"><b>31</b><span>circonscriptions, cinq assemblées</span></div>
+<div class="chiffre"><b>313</b><span>sièges au total</span></div>
+</div>
+<h2>2. Le rétro-test</h2>
+<p>Avant toute simulation, le moteur est appliqué aux voix réelles de 2024 et son résultat est comparé, circonscription par circonscription, à la proclamation officielle. Voici le résultat de ce contrôle, qui est rejoué à chaque construction du site.</p>
+<div class="defile"><table><thead><tr><th>Assemblée</th><th class="n">Sièges</th><th class="n">Circonscriptions</th><th class="n">Sièges mal placés</th><th>Cause</th></tr></thead><tbody>
+<tr><td>Chambre des représentants</td><td class="n">150</td><td class="n">11</td><td class="n">0</td><td>—</td></tr>
+<tr><td>Parlement flamand</td><td class="n">124</td><td class="n">6</td><td class="n">0</td><td>—</td></tr>
+<tr><td>Parlement wallon</td><td class="n">75</td><td class="n">11</td><td class="n">8</td><td>apparentement provincial en Hainaut, à Liège et à Namur, non implémenté</td></tr>
+<tr><td>Parlement bruxellois</td><td class="n">89</td><td class="n">2</td><td class="n">1</td><td>dernier siège du groupe français : la clé D'Hondt appliquée aux chiffres publiés donne MR 19 et PTB 16, la proclamation donne MR 20 et PTB 15</td></tr>
+<tr><td>Parlement de la Communauté germanophone</td><td class="n">25</td><td class="n">1</td><td class="n">0</td><td>—</td></tr>
+</tbody></table></div>
+<div class="encart"><p>La Chambre — c'est-à-dire le cœur du jeu — est reproduite exactement, siège pour siège, dans les onze circonscriptions. Le Parlement flamand et le Parlement germanophone aussi. Les deux écarts restants sont documentés ci-dessus plutôt que corrigés à la main : un modèle qui s'ajuste sur son propre résultat n'est plus un modèle.</p></div>
+<h2>3. Le report de voix</h2>
+<p>Le modèle part d'une part par liste et par région — soit le vote de 2024, soit l'une des trois enquêtes de 2026 — puis il ajoute, en points de pourcentage, les reports associés aux issues que vous avez choisies. Les listes qu'une enquête ne cite pas conservent leur part de 2024. L'ensemble est plancheré à 0,2 % puis renormalisé à 100 %.</p>
+<p>Le report est ensuite appliqué <em>proportionnellement</em> : les voix de chaque liste dans chaque circonscription sont multipliées par le rapport entre sa part cible et sa part de 2024 dans sa région, et la circonscription est renormalisée sur son nombre réel de votes valables. Une part ne peut donc jamais devenir négative, et la géographie interne de la région est conservée. C'est un modèle de report uniforme régional, standard et discutable — sa limite principale est qu'il ignore les mouvements propres à une seule province.</p>
+<h3>La matrice complète des reports</h3>
+<p>Dix-huit issues, chacune avec son vecteur. Rien n'est caché ; tout est ici.</p>
+<div class="defile"><table><thead><tr><th>Échéance</th><th>Issue</th><th>Report, en points</th><th class="n">Bande</th></tr></thead><tbody>
+<tr><td>Le conclave budgétaire de l&#x27;automne 2026</td><td>Un accord majoritairement structurel</td><td><strong>FL</strong> N-VA +1,2, Vlaams Belang −0,8, Vooruit −0,6, cd&amp;v +0,4, PVDA +0,4 · <strong>WA</strong> MR +0,9, PS −0,7, PTB +0,6, Les Engagés +0,5 · <strong>BXL</strong> MR +0,7, PS −0,5, PTB +0,5, Les Engagés +0,3</td><td class="n">±1,5</td></tr>
+<tr><td>Le conclave budgétaire de l&#x27;automne 2026</td><td>Un accord de façade</td><td><strong>FL</strong> Vlaams Belang +1,4, N-VA −0,9, PVDA +0,7, Vooruit −0,4, cd&amp;v −0,3 · <strong>WA</strong> PTB +1,3, MR −1,0, Les Engagés −0,4, PS +0,3 · <strong>BXL</strong> PTB +1,2, MR −0,9, Les Engagés −0,3, PS +0,2</td><td class="n">±1,5</td></tr>
+<tr><td>Le conclave budgétaire de l&#x27;automne 2026</td><td>L&#x27;échec et la crise</td><td><strong>FL</strong> Vlaams Belang +2,6, N-VA −1,6, PVDA +0,9, Vooruit −0,8, cd&amp;v −0,5, Groen +0,2 · <strong>WA</strong> PTB +2,2, MR −1,8, Les Engagés −1,0, PS +0,6, Ecolo +0,3 · <strong>BXL</strong> PTB +2,0, MR −1,6, Les Engagés −0,8, PS +0,5, Ecolo +0,3</td><td class="n">±2,5</td></tr>
+<tr><td>Les pensions et la concertation sociale</td><td>La réforme passe en force</td><td><strong>FL</strong> PVDA +1,3, Vooruit −1,0, Vlaams Belang +0,7, cd&amp;v −0,4, N-VA +0,3 · <strong>WA</strong> PTB +1,6, MR −0,9, Les Engagés −0,6, PS +0,5 · <strong>BXL</strong> PTB +1,5, MR −0,8, Les Engagés −0,5, PS +0,4</td><td class="n">±1,5</td></tr>
+<tr><td>Les pensions et la concertation sociale</td><td>Un compromis négocié</td><td><strong>FL</strong> Vooruit +1,0, N-VA −0,6, cd&amp;v +0,5, Vlaams Belang −0,3, PVDA −0,3 · <strong>WA</strong> PS +0,6, PTB −0,6, Les Engagés +0,5, MR −0,5 · <strong>BXL</strong> PS +0,6, PTB −0,6, Les Engagés +0,4, MR −0,4</td><td class="n">±1,2</td></tr>
+<tr><td>Les pensions et la concertation sociale</td><td>Le recul</td><td><strong>FL</strong> Vlaams Belang +1,1, N-VA −1,0, Vooruit +0,4, PVDA +0,3 · <strong>WA</strong> MR −1,1, PTB +0,8, PS +0,5, Les Engagés −0,2 · <strong>BXL</strong> MR −1,0, PTB +0,8, PS +0,4</td><td class="n">±1,5</td></tr>
+<tr><td>L&#x27;état de droit : GRECO, Commission, justice</td><td>Une mise en conformité</td><td><strong>FL</strong> Vlaams Belang −0,9, Groen +0,5, cd&amp;v +0,4, PVDA −0,3, N-VA +0,2 · <strong>WA</strong> Ecolo +0,6, Les Engagés +0,5, PTB −0,5, MR +0,3 · <strong>BXL</strong> Ecolo +0,7, PTB −0,6, Les Engagés +0,4, MR +0,3</td><td class="n">±1,2</td></tr>
+<tr><td>L&#x27;état de droit : GRECO, Commission, justice</td><td>Le statu quo</td><td><strong>FL</strong> Vlaams Belang +0,9, PVDA +0,5, N-VA −0,4, cd&amp;v −0,3, Open Vld −0,3 · <strong>WA</strong> PTB +0,9, MR −0,4, PS −0,4, Les Engagés −0,2 · <strong>BXL</strong> PTB +1,0, MR −0,4, PS −0,4</td><td class="n">±1,0</td></tr>
+<tr><td>L&#x27;état de droit : GRECO, Commission, justice</td><td>La déclaration de non-conformité</td><td><strong>FL</strong> Vlaams Belang +1,5, PVDA +0,7, N-VA −0,7, cd&amp;v −0,5, Open Vld −0,4, Groen +0,3 · <strong>WA</strong> PTB +1,4, MR −0,8, PS −0,6, Ecolo +0,4, Les Engagés −0,4 · <strong>BXL</strong> PTB +1,5, MR −0,8, PS −0,6, Ecolo +0,5</td><td class="n">±1,8</td></tr>
+<tr><td>La note souveraine et la charge de la dette</td><td>La stabilisation</td><td><strong>FL</strong> N-VA +0,8, Vlaams Belang −0,5, Open Vld +0,3, PVDA −0,3 · <strong>WA</strong> MR +0,8, PTB −0,4, Les Engagés +0,3, PS −0,3 · <strong>BXL</strong> MR +0,7, PTB −0,4, Les Engagés +0,2</td><td class="n">±1,0</td></tr>
+<tr><td>La note souveraine et la charge de la dette</td><td>Une nouvelle dégradation</td><td><strong>FL</strong> Vlaams Belang +1,3, N-VA −0,8, PVDA +0,6, Vooruit −0,4, cd&amp;v −0,3 · <strong>WA</strong> PTB +1,2, MR −1,1, PS +0,3, Les Engagés −0,3 · <strong>BXL</strong> PTB +1,2, MR −1,0, PS +0,3</td><td class="n">±1,5</td></tr>
+<tr><td>La note souveraine et la charge de la dette</td><td>Un choc de taux</td><td><strong>FL</strong> Vlaams Belang +1,8, PVDA +0,9, Vooruit −0,6, N-VA −0,5, cd&amp;v −0,5, Open Vld −0,5 · <strong>WA</strong> PTB +1,7, MR −1,0, Les Engagés −0,5, PS −0,3, Ecolo +0,3 · <strong>BXL</strong> PTB +1,7, MR −1,0, PS −0,3, Ecolo +0,3</td><td class="n">±2,2</td></tr>
+<tr><td>Migration, sécurité et exécution des décisions de justice</td><td>Le durcissement assumé</td><td><strong>FL</strong> N-VA +1,1, Vlaams Belang +0,6, Groen −0,4, cd&amp;v −0,3, Vooruit −0,3 · <strong>WA</strong> MR +0,7, Ecolo −0,4, PS −0,3, Les Engagés +0,2 · <strong>BXL</strong> Ecolo −0,5, MR +0,4, PTB +0,4, PS −0,3</td><td class="n">±1,5</td></tr>
+<tr><td>Migration, sécurité et exécution des décisions de justice</td><td>L&#x27;arbitrage judiciaire contraignant</td><td><strong>FL</strong> Vlaams Belang +0,9, N-VA −0,6, Groen +0,5, cd&amp;v +0,2 · <strong>WA</strong> Ecolo +0,6, MR −0,6, PTB +0,3, Les Engagés +0,2 · <strong>BXL</strong> Ecolo +0,8, MR −0,7, PTB +0,4</td><td class="n">±1,3</td></tr>
+<tr><td>Migration, sécurité et exécution des décisions de justice</td><td>La crise d&#x27;exécution</td><td><strong>FL</strong> Vlaams Belang +1,6, PVDA +0,5, N-VA −0,5, cd&amp;v −0,4, Open Vld −0,3, Groen +0,3 · <strong>WA</strong> PTB +1,2, MR −0,7, PS −0,5, Ecolo +0,4, Les Engagés −0,3 · <strong>BXL</strong> PTB +1,3, MR −0,7, Ecolo +0,5, PS −0,5</td><td class="n">±1,8</td></tr>
+<tr><td>La fin de législature</td><td>La législature va à son terme</td><td><strong>FL</strong> N-VA +0,6, Vlaams Belang −0,4, cd&amp;v +0,3 · <strong>WA</strong> MR +0,5, Les Engagés +0,3, PTB −0,3 · <strong>BXL</strong> MR +0,4, PTB −0,3, Les Engagés +0,2</td><td class="n">±1,0</td></tr>
+<tr><td>La fin de législature</td><td>La rupture et les élections anticipées</td><td><strong>FL</strong> Vlaams Belang +1,7, PVDA +0,6, N-VA −0,6, cd&amp;v −0,6, Vooruit −0,6, Open Vld −0,4 · <strong>WA</strong> PTB +1,5, MR −0,9, Les Engagés −0,5, PS −0,4, Ecolo +0,3 · <strong>BXL</strong> PTB +1,6, MR −0,9, Ecolo +0,4, PS −0,4, Les Engagés −0,4</td><td class="n">±2,0</td></tr>
+<tr><td>La fin de législature</td><td>Les affaires courantes</td><td><strong>FL</strong> Vlaams Belang +2,0, N-VA −0,8, PVDA +0,7, Vooruit −0,7, cd&amp;v −0,6, Open Vld −0,5 · <strong>WA</strong> PTB +1,8, MR −1,0, PS −0,6, Les Engagés −0,6, Ecolo +0,4 · <strong>BXL</strong> PTB +1,9, MR −1,0, PS −0,6, Ecolo +0,5, Les Engagés −0,5</td><td class="n">±2,2</td></tr>
+</tbody></table></div>
+<h2>4. La cohésion et les issues</h2>
+<p>La cohésion d'une coalition part de 64 et se corrige ainsi : -7 par parti au-delà du troisième ; -12 si la coalition n'a pas la majorité dans l'un des deux groupes linguistiques ; -7 si elle compte entre 76 et 78 sièges ; +6 si elle en compte 90 ou plus. Chaque chantier adopté ajoute ensuite son propre effet.</p>
+<p>L'arbre de décision, appliqué dans cet ordre :</p><ol>
+<li><strong>Sans gouvernement</strong> — Aucune coalition n&#x27;a été formée : la Belgique reste en affaires courantes.</li>
+<li><strong>La chute</strong> — Cohésion inférieure à 25 en fin de législature.</li>
+<li><strong>Le constituant</strong> — Un chantier de charge « révision » ou « loi spéciale » a été adopté avec l&#x27;arithmétique requise.</li>
+<li><strong>Le réformateur</strong> — Gain d&#x27;état de droit d&#x27;au moins 5 points.</li>
+<li><strong>Le comptable</strong> — Objectif budgétaire atteint : au moins 10 milliards d&#x27;euros structurels.</li>
+<li><strong>Reconduit</strong> — Aucune des conditions précédentes : la législature va à son terme sans changer ni les comptes ni les règles.</li>
+</ol>
+<h2>5. Ce que ce simulateur ne fait pas</h2>
+<ul>
+<li>Il ne modélise pas l'effet dévolutif de la case de tête : il attribue des sièges à des listes, jamais à des personnes. Aucune personne vivante n'est nommée dans la partie jouable.</li>
+<li>Il n'implémente pas l'apparentement provincial du Parlement wallon, et publie l'écart que cela produit.</li>
+<li>Il n'ajuste pas la participation ni les votes blancs et nuls : la structure de 2024 est conservée dans chaque circonscription.</li>
+<li>Il ne pondère pas les enquêtes entre elles et n'en fabrique pas de moyenne : vous en choisissez une, ou vous partez du vote réel de 2024.</li>
+<li>Il ne classe aucun parti et ne recommande aucun vote. Les exclusions sont des faits publics que vous validez ou non.</li>
+<li>Il n'a pas de version allemande, alors que la Communauté germanophone élit son parlement le même jour. C'est la limite la plus gênante de ce site.</li>
+</ul>
+</main>
+<footer class="pied">
+  <p class="pied-liens"><a href="../sources/">Les sources</a> · <a href="../glossaire/">Le glossaire</a> · <a href="../coalitions/">Les coalitions</a> · <a href="../reseau/">Le réseau</a></p>
+  <p>Texte et code sous licence CC BY-SA 4.0. Aucun traceur, aucun cookie, aucune police distante, aucun appel réseau.</p>
+  <p>Dernière mise à jour : <time datetime="2026-08-18">2026-08-18</time> ·
+     <a href="https://github.com/ouaisfieu/election" rel="noopener">Code source</a></p>
+</footer>
+
+</body>
+</html>
