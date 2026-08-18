@@ -1,0 +1,163 @@
+/* Le Scrutin — feuille unique. Aucune police distante : pile système.
+   Deux thèmes, décidés par la préférence du système. Contrastes vérifiés AA. */
+:root {
+  --fond: #0e1116;
+  --fond-2: #161b23;
+  --fond-3: #1d232d;
+  --trait: #2b333f;
+  --texte: #e8ecf2;
+  --doux: #a8b3c2;
+  --accent: #e0b341;
+  --accent-2: #6fb3e0;
+  --rouge: #e2685f;
+  --vert: #6ec28a;
+  --largeur: 74rem;
+  --rayon: 6px;
+}
+@media (prefers-color-scheme: light) {
+  :root {
+    --fond: #f7f8fa; --fond-2: #ffffff; --fond-3: #eef1f5; --trait: #d3d9e2;
+    --texte: #14181f; --doux: #4d5766; --accent: #8a6a00; --accent-2: #1a5f96;
+    --rouge: #b3352b; --vert: #1f7a45;
+  }
+}
+* { box-sizing: border-box; }
+html { font-size: 17px; scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+body {
+  margin: 0; background: var(--fond); color: var(--texte);
+  font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, "Times New Roman", serif;
+  line-height: 1.62; text-rendering: optimizeLegibility;
+}
+h1, h2, h3, h4, .marque, .principale, .fil, table, .chiffre, .etiquette, button, input, select, label {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+a { color: var(--accent-2); text-underline-offset: 2px; }
+a:hover { color: var(--accent); }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+.saut {
+  position: absolute; left: -9999px; top: 0; background: var(--accent); color: #14181f;
+  padding: .6rem 1rem; z-index: 50;
+}
+.saut:focus { left: 0; }
+
+/* ---------------------------------------------------------------- entête */
+.entete { border-bottom: 1px solid var(--trait); background: var(--fond-2); }
+.bandeau {
+  max-width: var(--largeur); margin: 0 auto; padding: .7rem 1.1rem;
+  display: flex; gap: 1rem; align-items: center; flex-wrap: wrap;
+}
+.marque { font-weight: 700; font-size: 1.05rem; letter-spacing: .01em; color: var(--texte); text-decoration: none; }
+.marque:hover { color: var(--accent); }
+.principale { flex: 1 1 auto; }
+.principale ul { list-style: none; display: flex; flex-wrap: wrap; gap: .2rem 1rem; margin: 0; padding: 0; }
+.principale a { color: var(--doux); text-decoration: none; font-size: .86rem; }
+.principale a:hover, .principale a[aria-current] { color: var(--accent); }
+.principale a[aria-current] { border-bottom: 2px solid var(--accent); }
+.langue { font-size: .82rem; color: var(--doux); text-decoration: none; border: 1px solid var(--trait); padding: .18rem .5rem; border-radius: var(--rayon); }
+.fil { max-width: var(--largeur); margin: 0 auto; padding: 0 1.1rem .55rem; }
+.fil ol { list-style: none; display: flex; flex-wrap: wrap; gap: .4rem; margin: 0; padding: 0; font-size: .8rem; color: var(--doux); }
+.fil li + li::before { content: "›"; margin-right: .4rem; color: var(--trait); }
+.fil a { color: var(--doux); }
+
+/* --------------------------------------------------------------- contenu */
+main { max-width: var(--largeur); margin: 0 auto; padding: 1.6rem 1.1rem 3rem; }
+.etroit { max-width: 44rem; }
+h1 { font-size: clamp(1.7rem, 4vw, 2.5rem); line-height: 1.15; margin: .2rem 0 .6rem; letter-spacing: -.01em; }
+h2 { font-size: clamp(1.25rem, 2.6vw, 1.6rem); margin: 2.4rem 0 .7rem; line-height: 1.25; }
+h3 { font-size: 1.08rem; margin: 1.6rem 0 .5rem; }
+.chapeau { font-size: 1.12rem; color: var(--doux); max-width: 46rem; }
+p, li { max-width: 46rem; }
+.large p, .large li { max-width: none; }
+hr { border: 0; border-top: 1px solid var(--trait); margin: 2.4rem 0; }
+
+.grille { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr)); }
+.carte {
+  background: var(--fond-2); border: 1px solid var(--trait); border-radius: var(--rayon);
+  padding: 1rem 1.1rem;
+}
+.carte h3 { margin-top: 0; }
+.carte p { margin-bottom: .4rem; }
+.carte--accent { border-left: 3px solid var(--accent); }
+
+.etiquette {
+  display: inline-block; font-size: .68rem; text-transform: uppercase; letter-spacing: .08em;
+  padding: .12rem .45rem; border-radius: 3px; border: 1px solid var(--trait); color: var(--doux);
+  vertical-align: middle;
+}
+.etiquette--fait { border-color: var(--vert); color: var(--vert); }
+.etiquette--echeance { border-color: var(--accent); color: var(--accent); }
+.etiquette--hypothese { border-color: var(--rouge); color: var(--rouge); }
+
+.encart {
+  background: var(--fond-3); border-left: 3px solid var(--accent); padding: .9rem 1.1rem;
+  border-radius: 0 var(--rayon) var(--rayon) 0; margin: 1.4rem 0;
+}
+.encart p:last-child { margin-bottom: 0; }
+
+table { width: 100%; border-collapse: collapse; font-size: .88rem; margin: 1rem 0; }
+caption { text-align: left; color: var(--doux); font-size: .82rem; padding-bottom: .4rem; }
+th, td { text-align: left; padding: .38rem .5rem; border-bottom: 1px solid var(--trait); }
+th { color: var(--doux); font-weight: 600; font-size: .78rem; text-transform: uppercase; letter-spacing: .05em; }
+td.n, th.n { text-align: right; font-variant-numeric: tabular-nums; }
+tbody tr:hover { background: var(--fond-3); }
+.defile { overflow-x: auto; }
+
+.barre { display: block; height: .5rem; border-radius: 2px; background: var(--accent); min-width: 2px; }
+.pastille { display: inline-block; width: .62rem; height: .62rem; border-radius: 2px; vertical-align: baseline; margin-right: .35rem; }
+
+.hemicycle { display: flex; flex-wrap: wrap; gap: 2px; margin: 1rem 0; max-width: 46rem; }
+.siege { width: .62rem; height: .62rem; border-radius: 50%; }
+
+.chiffres { display: grid; gap: .8rem; grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr)); margin: 1.2rem 0; }
+.chiffre { background: var(--fond-2); border: 1px solid var(--trait); border-radius: var(--rayon); padding: .7rem .8rem; }
+.chiffre b { display: block; font-size: 1.55rem; line-height: 1.1; font-variant-numeric: tabular-nums; }
+.chiffre span { font-size: .76rem; color: var(--doux); }
+
+button, .bouton {
+  font-size: .9rem; padding: .5rem .95rem; border-radius: var(--rayon); cursor: pointer;
+  border: 1px solid var(--trait); background: var(--fond-3); color: var(--texte); text-decoration: none;
+  display: inline-block;
+}
+button:hover, .bouton:hover { border-color: var(--accent); color: var(--accent); }
+.bouton--primaire { background: var(--accent); border-color: var(--accent); color: #14181f; font-weight: 600; }
+.bouton--primaire:hover { color: #14181f; filter: brightness(1.08); }
+
+fieldset { border: 1px solid var(--trait); border-radius: var(--rayon); padding: .9rem 1rem; margin: 1.2rem 0; }
+legend { padding: 0 .4rem; color: var(--doux); font-size: .82rem; text-transform: uppercase; letter-spacing: .06em; }
+.choix { display: grid; gap: .6rem; }
+.choix label {
+  display: block; border: 1px solid var(--trait); border-radius: var(--rayon); padding: .7rem .85rem;
+  cursor: pointer; background: var(--fond-2);
+}
+.choix label:hover { border-color: var(--accent-2); }
+.choix input:checked + span { color: var(--accent); }
+.choix label:has(input:checked) { border-color: var(--accent); background: var(--fond-3); }
+.choix strong { display: block; }
+.choix small { color: var(--doux); display: block; margin-top: .25rem; }
+select, input[type=text] { background: var(--fond-2); color: var(--texte); border: 1px solid var(--trait); border-radius: var(--rayon); padding: .4rem .55rem; font-size: .9rem; }
+
+.acte { border-top: 1px solid var(--trait); padding-top: 1.4rem; margin-top: 2.2rem; }
+.acte > h2 { margin-top: 0; }
+.numero { color: var(--accent); font-size: .78rem; letter-spacing: .12em; text-transform: uppercase; display: block; }
+
+.pied { border-top: 1px solid var(--trait); background: var(--fond-2); }
+.pied > * { max-width: var(--largeur); margin: 0 auto; padding: 0 1.1rem; font-size: .82rem; color: var(--doux); }
+.pied p { padding-top: .5rem; padding-bottom: .5rem; max-width: none; }
+.pied-liens { padding-top: 1.1rem !important; }
+.pied p:last-child { padding-bottom: 1.4rem; }
+
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.sansjs { border: 1px solid var(--trait); border-radius: var(--rayon); padding: .8rem 1rem; background: var(--fond-3); }
+[hidden] { display: none !important; }
+
+@media print {
+  .entete, .pied, .saut, .fil, button, .bouton { display: none !important; }
+  body { background: #fff; color: #000; }
+  a { color: #000; }
+  main { max-width: none; }
+}
+@media (max-width: 46rem) {
+  .principale ul { gap: .2rem .7rem; }
+  html { font-size: 16px; }
+}
